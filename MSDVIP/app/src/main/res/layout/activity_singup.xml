@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".SplashScreenActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/lblCrearCuenta"
+        android:id="@+id/textView4"
+        android:gravity="center|fill_horizontal|center_vertical|center_horizontal|fill_vertical|top"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Por favor ingresar los datos indicados"
+        android:id="@+id/lblDescripcion1"
+        android:layout_marginTop="53dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:gravity="center|center_vertical|center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="para crear su perfil"
+        android:id="@+id/lblDescripcion2"
+        android:textSize="18sp"
+        android:layout_below="@+id/lblDescripcion1"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/txtCMPSingUp"
+        android:background="@drawable/editextshapecrearcuenta"
+        android:gravity="fill_horizontal|center_vertical|center_horizontal|fill_vertical"
+        android:numeric="integer"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:paddingLeft="25dp"
+        android:layout_below="@+id/lblDescripcion2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:hint="Ingresar CMP"
+        android:textColorHint="#FFFFFF"
+        android:maxLength="6"
+        android:text="@string/txtCMP" />
+
+    <Button
+        android:id="@+id/btnValidarSignUp"
+
+        android:text="@string/btnValidar"
+        android:textColor="#11B86A"
+        android:textSize="25sp"
+
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonvalidarcrearcuenta"
+        android:layout_marginTop="51dp"
+        android:gravity="center|fill_horizontal|center_vertical|center_horizontal|fill_vertical"
+        android:paddingLeft="25dp"
+        android:layout_below="@+id/txtCMPSingUp"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
