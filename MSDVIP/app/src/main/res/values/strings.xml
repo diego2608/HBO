@@ -14,4 +14,6 @@
     <string name="txtLoginPassword" />
     <string name="txtLoginInicarSesion">Iniciar Sesión</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="lblNombreDocNavMain">Android </string>
+    <string name="lblApellidoDocNavMain">Studio</string>
 </resources>

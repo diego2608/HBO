@@ -33,19 +33,25 @@
         android:id="@+id/txtLoginCMD"
         android:numeric="integer"
         android:textSize="20sp"
-        android:textColor="#FFFFFF"
+        android:textColor="#070606"
         android:paddingLeft="25dp"
         android:text="@string/txtCMDLogin"
         android:hint="CMP"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#747373"
         android:maxLength="6"
         android:layout_above="@+id/txtPasswordLogin"
-        android:layout_marginBottom="71dp"
+        android:layout_marginBottom="35dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:gravity="center|center_vertical|center_horizontal" />
+        android:gravity="center|center_vertical|center_horizontal"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:singleLine="false"
+        android:textIsSelectable="false"
+        android:linksClickable="false"
+        android:longClickable="false"
+        android:autoLink="none" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -59,13 +65,15 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:gravity="center|center_vertical|center_horizontal" />
+        android:gravity="center|center_vertical|center_horizontal"
+        android:textCursorDrawable="@drawable/color_cursor"
+        />
 
     <Button
         android:id="@+id/btnIniciarSecionLogin"
 
         android:text="@string/txtLoginInicarSesion"
-        android:textColor="#11BD6D"
+        android:textColor="#55B3AF"
         android:textSize="20sp"
         android:layout_width="160dp"
         android:layout_height="60dp"
