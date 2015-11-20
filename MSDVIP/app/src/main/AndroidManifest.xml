@@ -48,7 +48,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".PerfilpageActivity"
+        <activity android:name=".UI.ControlsViews.PerfilpageActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

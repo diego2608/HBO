@@ -16,4 +16,5 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="lblNombreDocNavMain">Android </string>
     <string name="lblApellidoDocNavMain">Studio</string>
+    <string name="lblPerfilNameView">Crear Cuenta</string>
 </resources>
