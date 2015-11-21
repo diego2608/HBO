@@ -17,4 +17,5 @@
     <string name="lblNombreDocNavMain">Android </string>
     <string name="lblApellidoDocNavMain">Studio</string>
     <string name="lblPerfilNameView">Crear Cuenta</string>
+    <string name="BtnFormularioValidar">Validar</string>
 </resources>

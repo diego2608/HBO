@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#08918B</item>
-        <item name="colorPrimaryDark">#08918B</item>
-        <item name="colorAccent">#08918B</item>
+        <item name="colorPrimary">#dadada</item>
+        <item name="colorPrimaryDark">#AEAEAE</item>
+        <item name="colorAccent">#FAFAFA</item>
     </style>
 
     <style name="MyActionBarTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">

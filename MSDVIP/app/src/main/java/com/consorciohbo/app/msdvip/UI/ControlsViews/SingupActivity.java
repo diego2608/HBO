@@ -15,9 +15,9 @@ public class SingupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singup);
 
-        /*//-------------------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------------------
         //Defino mi boton Guardar Formulario
-        Button btnSaveFormulario = (Button) findViewById(R.id.btnGuardarFormulario);
+        Button btnSaveFormulario = (Button) findViewById(R.id.btnValidarSignUp);
 
         //Asigno el evenyo onclick al botn
         btnSaveFormulario.setOnClickListener(new View.OnClickListener() {
@@ -27,6 +27,6 @@ public class SingupActivity extends AppCompatActivity {
                 Intent vistaFormulario = new Intent(SingupActivity.this, PerfilpageActivity.class);
                 startActivity(vistaFormulario);
             }
-        });*/
+        });
     }
 }

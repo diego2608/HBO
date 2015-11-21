@@ -190,19 +190,18 @@
         android:layout_alignRight="@+id/txtApellidoFormulario"
         android:layout_alignEnd="@+id/txtApellidoFormulario" />
 
-
     <Button
-        android:id="@+id/btnGuardarFormulario"
-        android:text="@string/btnValidar"
-        android:textColor="#55B3AF"
-        android:textSize="15sp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:background="@drawable/buttonvalidarcrearcuenta"
-        android:paddingLeft="20dp"
-        android:textAlignment="gravity"
-        android:gravity="fill_horizontal|fill_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/BtnFormularioValidar"
+        android:id="@+id/btnValidarFormulario"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#55B3AF"
+        android:textSize="25sp"
+        android:gravity="center|fill_horizontal|center_vertical|center_horizontal|fill_vertical"
+        android:background="@drawable/buttonvalidarcrearcuenta"
+        android:paddingLeft="25dp" />
+
 
 </RelativeLayout>
