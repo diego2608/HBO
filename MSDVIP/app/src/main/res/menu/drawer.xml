@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/comunicacion"
+            android:checked="false"
+            android:icon="@drawable/imgcomunicacionseleccionado"
+            android:title="@string/comunicacion_string" />
+
+        <item
+            android:id="@+id/servicios"
+            android:checked="false"
+            android:icon="@drawable/imgserviciosnoseleccionado"
+            android:title="@string/servicios_string" />
+
+        <item
+            android:id="@+id/perfil"
+            android:checked="false"
+            android:icon="@drawable/imgperfilnoseleccionado"
+            android:title="@string/perfil_string" />
+
+
+    </group>
+</menu>
