@@ -18,12 +18,15 @@
         android:layout_centerHorizontal="true" />
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/imageView4"
         android:src="@drawable/imglogo"
         android:layout_below="@+id/textView5"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/btnIniciarSecionLogin"
+        android:layout_alignStart="@+id/btnIniciarSecionLogin"
+        android:layout_alignRight="@+id/btnIniciarSecionLogin"
+        android:layout_alignEnd="@+id/btnIniciarSecionLogin" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -78,7 +81,7 @@
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:background="@drawable/buttoniniciarsesionshape"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="30dp"
         android:layout_below="@+id/txtPasswordLogin"
         android:layout_centerHorizontal="true"
         android:gravity="center|center_vertical|center_horizontal" />

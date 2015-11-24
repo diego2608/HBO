@@ -70,8 +70,8 @@
         android:textColor="#08918B"/>
 
     <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/txtApellidoFormulario"
@@ -92,7 +92,7 @@
         android:textColor="#08918B"/>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtEspecialidadFormulario"
         android:layout_below="@+id/txtApellidoFormulario"
@@ -100,10 +100,12 @@
         android:layout_alignEnd="@+id/txtApellidoFormulario"
         android:layout_alignLeft="@+id/txtApellidoFormulario"
         android:layout_alignStart="@+id/txtApellidoFormulario"
+        android:singleLine="true"
+        android:inputType="textPersonName"
         />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:id="@+id/txtPasswordFormulario"
@@ -142,7 +144,7 @@
         android:textColor="#08918B"/>
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
@@ -166,7 +168,7 @@
         android:textColor="#08918B" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
@@ -179,8 +181,8 @@
 
 
     <EditText
-        android:layout_width="200dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/txtNombreFormulario"
@@ -199,9 +201,9 @@
         android:layout_centerHorizontal="true"
         android:textColor="#55B3AF"
         android:textSize="25sp"
-        android:gravity="center|fill_horizontal|center_vertical|center_horizontal|fill_vertical"
+        android:gravity="center|center_vertical|center_horizontal"
         android:background="@drawable/buttonvalidarcrearcuenta"
-        android:paddingLeft="25dp" />
+        android:paddingLeft="0dp" />
 
 
 </RelativeLayout>

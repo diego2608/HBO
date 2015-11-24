@@ -16,13 +16,16 @@
         android:layout_centerHorizontal="true" />
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/imageView3"
         android:src="@drawable/imglogo"
         android:layout_below="@+id/textView4"
-        android:layout_alignLeft="@+id/txtCMPSingUp"
-        android:layout_alignStart="@+id/txtCMPSingUp" />
+        android:layout_alignLeft="@+id/btnValidarSignUp"
+        android:layout_alignStart="@+id/btnValidarSignUp"
+        android:layout_alignRight="@+id/btnValidarSignUp"
+        android:layout_alignEnd="@+id/btnValidarSignUp"
+        android:foregroundGravity="center|center_vertical|center_horizontal" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,13 +51,13 @@
         android:layout_alignEnd="@+id/textView4" />
 
     <EditText
-        android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
         android:id="@+id/txtCMPSingUp"
         android:background="@drawable/editextshapecrearcuenta"
-        android:gravity="fill_horizontal|center_vertical|center_horizontal|fill_vertical"
+        android:gravity="center|center_vertical|center_horizontal"
         android:numeric="integer"
         android:textSize="20sp"
         android:textColor="#FFFFFF"
@@ -65,7 +68,8 @@
         android:hint="Ingresar CMP"
         android:textColorHint="#FFFFFF"
         android:maxLength="6"
-        android:textCursorDrawable="@drawable/color_cursor" />
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:foregroundGravity="center|center_vertical|center_horizontal" />
 
     <Button
         android:id="@+id/btnValidarSignUp"
@@ -74,13 +78,13 @@
         android:textColor="#55B3AF"
         android:textSize="25sp"
 
-        android:layout_width="150dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/buttonvalidarcrearcuenta"
         android:layout_marginTop="51dp"
-        android:gravity="center|fill_horizontal|center_vertical|center_horizontal|fill_vertical"
-        android:paddingLeft="25dp"
+        android:gravity="center|center_vertical|center_horizontal"
         android:layout_below="@+id/txtCMPSingUp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:foregroundGravity="center|center_vertical|center_horizontal" />
 
 </RelativeLayout>
