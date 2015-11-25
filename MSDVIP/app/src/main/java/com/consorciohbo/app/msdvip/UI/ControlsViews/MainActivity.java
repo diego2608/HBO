@@ -5,6 +5,8 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +15,7 @@ import android.widget.Toast;
 
 import com.consorciohbo.app.msdvip.R;
 import com.consorciohbo.app.msdvip.UI.ControlsFragment.ContentFragment;
+import com.consorciohbo.app.msdvip.UI.RecycleViewControllers.TravelListAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,11 +23,17 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+    private RecyclerView mRecyclerView;
+    private TravelListAdapter mAdapter;
+
+    private StaggeredGridLayoutManager mStaggeredLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //---------------------------------------------------------------
+        //Codigo del toolbar
         //inicializamos el toolbar y ajustes en el action bar
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -53,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
                     //Replacing the main content with ContentFragment Which is our Inbox View;
                     case R.id.comunicacion:
-                        Toast.makeText(getApplicationContext(), "Comunicacion Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Comunicacion", Toast.LENGTH_SHORT).show();
                         ContentFragment fragment = new ContentFragment();
 
                         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -65,12 +74,12 @@ public class MainActivity extends AppCompatActivity {
                     // For rest of the options we just show a toast on click
 
                     case R.id.servicios:
-                        Toast.makeText(getApplicationContext(), "Servicios Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Servicios", Toast.LENGTH_SHORT).show();
                         return true;
 
 
                     case R.id.perfil:
-                        Toast.makeText(getApplicationContext(), "Perfil Selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Perfil", Toast.LENGTH_SHORT).show();
                         return true;
 
                 }
@@ -103,8 +112,16 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
 
 
-    }
+    //---------------------------------------------------------------------------------------------------------------
+        //Codigo del listview
+        mRecyclerView = (RecyclerView) findViewById(R.id.list);
+        mStaggeredLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
+        mRecyclerView.setLayoutManager(mStaggeredLayoutManager);
+        mAdapter = new TravelListAdapter(this);
+        mRecyclerView.setAdapter(mAdapter);
 
+    }
+    //---------------
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
