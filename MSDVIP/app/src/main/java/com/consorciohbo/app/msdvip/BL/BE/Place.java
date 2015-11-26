@@ -1,4 +1,4 @@
-package com.consorciohbo.app.msdvip.UI.RecycleViewControllers;
+package com.consorciohbo.app.msdvip.BL.BE;
 
 import android.content.Context;
 

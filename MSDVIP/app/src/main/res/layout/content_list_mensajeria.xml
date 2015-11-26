@@ -40,8 +40,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton"
+        android:src="@drawable/btnredactar"
+        android:background="#ffffff"
+        android:layout_below="@+id/textView14"
         android:layout_toRightOf="@+id/textView15"
-        android:layout_below="@+id/textView14" />
+        android:layout_toEndOf="@+id/textView15"
+        android:layout_marginLeft="10dp" />
 
     <ListView
         android:id="@+id/listContactos"

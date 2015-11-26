@@ -1,5 +1,7 @@
 package com.consorciohbo.app.msdvip.UI.RecycleViewControllers;
 
+import com.consorciohbo.app.msdvip.BL.BE.Place;
+
 import java.util.ArrayList;
 
 /**

@@ -4,20 +4,34 @@
     android:layout_height="match_parent" >
 
     <TableRow>
-        <ImageView
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/imgFotoContacto"
-            android:layout_width="50dp"
-            android:layout_height="50dp"/>
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/fondomedico"
+            app:border_color="#FF000000"
+            android:paddingTop="20dp"
+            android:foregroundGravity="center|center_vertical|center_horizontal" />
 
         <TextView
             android:id="@+id/txtNombreContacto"
             android:layout_width="wrap_content"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:text="hola"
+            android:textSize="12sp"
+            android:paddingTop="10dp"
+            android:foregroundGravity="center|center_vertical|center_horizontal" />
 
-        <ImageView
-            android:id="@+id/imgRedactar"
-            android:layout_width="50dp"
-            android:layout_height="50dp"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:src="@drawable/btnredactar"
+            android:background="#ffffff"
+            android:layout_marginLeft="15dp" />
+
 
     </TableRow>
 </TableLayout>

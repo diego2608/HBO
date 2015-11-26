@@ -37,6 +37,7 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".UI.ControlsViews.MainActivity"
             android:label="@string/title_activity_main"
@@ -46,6 +47,7 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".UI.ControlsViews.PerfilpageActivity"
             android:screenOrientation="portrait"
@@ -58,6 +60,8 @@
             android:name=".ListMensajeriaActivity"
             android:label="@string/title_activity_list_mensajeria"
             android:theme="@style/AppTheme" >
+        </activity>
+        <activity android:name=".SendmessageActivity" >
         </activity>
     </application>
 
