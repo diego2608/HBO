@@ -62,7 +62,6 @@
         android:numeric="integer"
         android:textSize="20sp"
         android:textColor="#FFFFFF"
-        android:paddingLeft="25dp"
         android:layout_below="@+id/lblDescripcion2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"

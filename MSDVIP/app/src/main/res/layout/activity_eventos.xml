@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <TabHost android:id="@+id/tabhostEventos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView android:id="@+id/textView2"
+                android:text="Febrero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TabWidget android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:id="@android:id/tabs"
+                android:background="@drawable/imgeventos"/>
+
+            <FrameLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@android:id/tabcontent" >
+
+                <LinearLayout android:id="@+id/tab1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foregroundGravity="center|center_vertical|center_horizontal"
+                    android:layout_gravity="center">
+
+
+                    <Spinner
+                        android:layout_width="93dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinner"
+                        android:layout_gravity="right"
+                        android:textColor="#55B3AF"
+                        android:spinnerMode="dropdown" />
+
+                    <DatePicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/datePicker"
+                        android:foregroundGravity="center_vertical"
+                        android:layout_gravity="center"
+                        android:paddingTop="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/tab2"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <CalendarView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/calendarView"
+                        android:layout_gravity="center_horizontal" />
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </TabHost>
+</LinearLayout>
