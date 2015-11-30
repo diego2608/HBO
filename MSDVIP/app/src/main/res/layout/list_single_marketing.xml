@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TableRow>
+
+
+
+        <TextView
+            android:id="@+id/txtNombreAreaMarketing"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="hola"
+            android:textSize="12sp"
+            android:paddingTop="10dp"
+            android:foregroundGravity="center|center_vertical|center_horizontal" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgbtnRedactar"
+            android:src="@drawable/btnredactar"
+            android:background="#ffffff"
+            android:layout_marginLeft="15dp" />
+
+
+    </TableRow>
+</TableLayout>

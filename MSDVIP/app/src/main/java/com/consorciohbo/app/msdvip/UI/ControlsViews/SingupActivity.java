@@ -24,7 +24,7 @@ public class SingupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent vistaFormulario = new Intent(SingupActivity.this, PerfilpageActivity.class);
+                Intent vistaFormulario = new Intent(SingupActivity.this, CrearUserActivity.class);
                 startActivity(vistaFormulario);
             }
         });

@@ -5,8 +5,6 @@ package com.consorciohbo.app.msdvip.UI.Controls;
  */
 import android.app.Activity;
 import android.content.Context;
-import android.media.Image;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +26,7 @@ public class ContactoArrayAdapter extends ArrayAdapter<ContactosBE>{
 
     public ContactoArrayAdapter(Activity context, LayoutInflater inflater, ArrayList<ContactosBE> contactosBEs
                                 ) {
-        super(context, R.layout.list_single);
+        super(context, R.layout.list_single_contacto);
         this.context = context;
         this.contactosBEs = contactosBEs;
     }
@@ -46,7 +44,7 @@ public class ContactoArrayAdapter extends ArrayAdapter<ContactosBE>{
         View rowView = view;
         if(rowView == null){
             //si la vista no existe, la creamos
-            rowView = inflater.inflate(R.layout.list_single, null);
+            rowView = inflater.inflate(R.layout.list_single_contacto, null);
             holder = new ViewHolder();
 
             holder.imageView = (ImageView) rowView.findViewById(R.id.imgFotoContacto);

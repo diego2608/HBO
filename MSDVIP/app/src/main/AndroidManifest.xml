@@ -55,13 +55,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UI.ControlsViews.ListMensajeriaActivity"
+            android:name=".UI.ControlsViews.MensajeriaContactosActivity"
             android:label="@string/title_activity_list_mensajeria"
             android:theme="@style/AppTheme" >
         </activity>
         <activity android:name=".UI.ControlsViews.SendmessageActivity" >
         </activity>
         <activity android:name=".EventosActivity" >
+        </activity>
+        <activity android:name=".UI.ControlsViews.CrearUserActivity" >
+        </activity>
+        <activity android:name=".MensajeriaMarketingActivity" >
         </activity>
     </application>
 

@@ -6,25 +6,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="#FFFFFF"
-    tools:context="com.consorciohbo.app.msdvip.UI.ControlsViews.PerfilpageActivity">
+    tools:context="com.consorciohbo.app.msdvip.UI.ControlsViews.CrearUserActivity">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/lblNameViewPerfil"
+        android:id="@+id/lblNameViewPerfilCreate"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/lblPerfilEditar" />
+        android:text="@string/lblCrearCuenta"
+        android:layout_marginBottom="20dp" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:id="@+id/imgFotoPerfil"
+        android:id="@+id/imgFotoPerfilCrear"
         android:src="@drawable/imgperfilseleccionado"
-        android:layout_below="@+id/lblNameViewPerfil"
+        android:layout_below="@+id/lblNameViewPerfilCreate"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -32,21 +33,23 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Nº Colegio Médico"
-        android:id="@+id/lblNColegiMedico"
-        android:layout_below="@+id/imgFotoPerfil"
+        android:id="@+id/lblNColegiMedicoCrear"
+        android:textStyle="bold|normal"
+        android:layout_below="@+id/imgFotoPerfilCrear"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold|normal" />
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="123456"
-        android:id="@+id/lblCMPNum"
-        android:layout_below="@+id/lblNColegiMedico"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/lblCMPNumCrear"
         android:textStyle="bold|normal"
-        android:textColor="#08918B"/>
+        android:textColor="#08918B"
+        android:layout_below="@+id/lblNColegiMedicoCrear"
+        android:layout_alignLeft="@+id/imgFotoPerfilCrear"
+        android:layout_alignStart="@+id/imgFotoPerfilCrear" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -54,7 +57,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Nombre:"
         android:id="@+id/textView"
-        android:layout_below="@+id/lblCMPNum"
+        android:layout_below="@+id/lblCMPNumCrear"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="30dp"
@@ -77,24 +80,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/txtNombreFormulario"
-        android:layout_above="@+id/txtApellidoFormulario"
-        android:layout_alignLeft="@+id/txtApellidoFormulario"
-        android:layout_alignStart="@+id/txtApellidoFormulario"
-        android:layout_alignRight="@+id/txtApellidoFormulario"
-        android:layout_alignEnd="@+id/txtApellidoFormulario"
-        android:editable="false"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtApellidoFormulario"
+        android:id="@+id/txtApellidoFrmCrear"
         android:layout_alignBottom="@+id/textView6"
-        android:layout_alignLeft="@+id/lblNColegiMedico"
-        android:layout_alignStart="@+id/lblNColegiMedico"
-        android:editable="false"/>
+        android:layout_alignLeft="@+id/lblNColegiMedicoCrear"
+        android:layout_alignStart="@+id/lblNColegiMedicoCrear" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -111,32 +100,30 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtEspecialidadFormulario"
-        android:layout_below="@+id/txtApellidoFormulario"
-        android:layout_alignRight="@+id/txtApellidoFormulario"
-        android:layout_alignEnd="@+id/txtApellidoFormulario"
-        android:layout_alignLeft="@+id/txtApellidoFormulario"
-        android:layout_alignStart="@+id/txtApellidoFormulario"
+        android:id="@+id/txtEspecialidadFrmCrear"
+        android:layout_below="@+id/txtApellidoFrmCrear"
+        android:layout_alignRight="@+id/txtApellidoFrmCrear"
+        android:layout_alignEnd="@+id/txtApellidoFrmCrear"
+        android:layout_alignLeft="@+id/txtApellidoFrmCrear"
+        android:layout_alignStart="@+id/txtApellidoFrmCrear"
         android:singleLine="true"
         android:inputType="textPersonName"
-        android:editable="false"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:id="@+id/txtPasswordFormulario"
-        android:layout_below="@+id/txtEspecialidadFormulario"
-        android:layout_alignRight="@+id/txtEspecialidadFormulario"
-        android:layout_alignEnd="@+id/txtEspecialidadFormulario"
-        android:layout_alignLeft="@+id/txtEspecialidadFormulario"
-        android:layout_alignStart="@+id/txtEspecialidadFormulario"
+        android:id="@+id/txtPasswordFrmCrear"
+        android:layout_below="@+id/txtEspecialidadFrmCrear"
+        android:layout_alignRight="@+id/txtEspecialidadFrmCrear"
+        android:layout_alignEnd="@+id/txtEspecialidadFrmCrear"
+        android:layout_alignLeft="@+id/txtEspecialidadFrmCrear"
+        android:layout_alignStart="@+id/txtEspecialidadFrmCrear"
         android:maxLength="8"
         android:hint="Escriba su contraseña"
         android:textSize="13sp"
-        android:layout_marginTop="10dp"
-        android:editable="false"/>
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -144,7 +131,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Contraseña"
         android:id="@+id/textView8"
-        android:layout_alignTop="@+id/txtPasswordFormulario"
+        android:layout_alignTop="@+id/txtPasswordFrmCrear"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
@@ -156,7 +143,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Celular:"
         android:id="@+id/textView9"
-        android:layout_below="@+id/txtPasswordFormulario"
+        android:layout_below="@+id/txtPasswordFrmCrear"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
@@ -167,13 +154,12 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/txtCelularFormulario"
+        android:id="@+id/txtCelularFrmCrear"
         android:layout_below="@+id/textView8"
-        android:layout_alignLeft="@+id/txtPasswordFormulario"
-        android:layout_alignStart="@+id/txtPasswordFormulario"
-        android:layout_alignRight="@+id/txtPasswordFormulario"
-        android:layout_alignEnd="@+id/txtPasswordFormulario"
-        android:editable="false"/>
+        android:layout_alignLeft="@+id/txtPasswordFrmCrear"
+        android:layout_alignStart="@+id/txtPasswordFrmCrear"
+        android:layout_alignRight="@+id/txtPasswordFrmCrear"
+        android:layout_alignEnd="@+id/txtPasswordFrmCrear" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -181,7 +167,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Correo:"
         android:id="@+id/textView10"
-        android:layout_below="@+id/txtCelularFormulario"
+        android:layout_below="@+id/txtCelularFrmCrear"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp"
@@ -192,56 +178,40 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/txtCorreoFormulario"
-        android:layout_below="@+id/txtCelularFormulario"
-        android:layout_alignLeft="@+id/txtCelularFormulario"
-        android:layout_alignStart="@+id/txtCelularFormulario"
-        android:layout_alignRight="@+id/txtCelularFormulario"
-        android:layout_alignEnd="@+id/txtCelularFormulario"
-        android:editable="false"/>
+        android:id="@+id/txtCorreoFrmCrear"
+        android:layout_below="@+id/txtCelularFrmCrear"
+        android:layout_alignLeft="@+id/txtCelularFrmCrear"
+        android:layout_alignStart="@+id/txtCelularFrmCrear"
+        android:layout_alignRight="@+id/txtCelularFrmCrear"
+        android:layout_alignEnd="@+id/txtCelularFrmCrear" />
 
 
-
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtNombreFrmCrear"
+        android:layout_above="@+id/txtApellidoFrmCrear"
+        android:layout_alignLeft="@+id/txtApellidoFrmCrear"
+        android:layout_alignStart="@+id/txtApellidoFrmCrear"
+        android:layout_alignRight="@+id/txtApellidoFrmCrear"
+        android:layout_alignEnd="@+id/txtApellidoFrmCrear" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/BtnFormularioValidar"
-        android:id="@+id/btnSaveForm"
+        android:id="@+id/btnValidarFormCrear"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:textColor="#55B3AF"
         android:textSize="25sp"
         android:gravity="center|center_vertical|center_horizontal"
         android:background="@drawable/buttonvalidarcrearcuenta"
-        android:paddingLeft="0dp"
-        android:visibility="gone"
-        />
+        android:paddingLeft="0dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Editar"
-        android:id="@+id/btnEditarPerfilEditar"
-        android:textColor="#55B3AF"
-        android:textSize="12sp"
-        android:paddingLeft="0dp"
-        android:background="@drawable/btnshapeeditar"
-        android:layout_alignParentTop="true"
-        android:layout_alignBottom="@+id/lblNameViewPerfil"
-        android:layout_alignRight="@+id/txtNombreFormulario"
-        android:layout_alignEnd="@+id/txtNombreFormulario" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Version: 1.0.0"
-        android:id="@+id/textView17"
-        android:textSize="8sp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>
