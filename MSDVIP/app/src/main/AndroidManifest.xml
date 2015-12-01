@@ -65,7 +65,11 @@
         </activity>
         <activity android:name=".UI.ControlsViews.CrearUserActivity" >
         </activity>
-        <activity android:name=".MensajeriaMarketingActivity" >
+        <activity android:name=".UI.ControlsViews.MensajeriaMarketingActivity" >
+        </activity>
+        <activity android:name=".SitiosWebActivity" >
+        </activity>
+        <activity android:name=".MaterialesMedicosActivity" >
         </activity>
     </application>
 

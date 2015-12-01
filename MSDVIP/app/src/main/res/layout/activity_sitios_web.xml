@@ -6,6 +6,6 @@
     android:layout_height="match_parent" android:fitsSystemWindows="true"
     tools:context="com.consorciohbo.app.msdvip.UI.ControlsViews.MensajeriaMarketingActivity">
 
-    <include layout="@layout/content_list_mensajeria_marketing" />
+    <include layout="@layout/content_list_websites" />
 
 </android.support.design.widget.CoordinatorLayout>

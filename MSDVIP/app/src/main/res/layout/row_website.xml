@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TableRow>
+
+
+
+        <TextView
+            android:id="@+id/txturlPagina"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="hola"
+            android:textSize="12sp"
+            android:paddingTop="10dp"
+            android:foregroundGravity="center|center_vertical|center_horizontal" />
+
+
+        <TextView
+            android:id="@+id/txtVerMas"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="ver mas"
+            android:textSize="12sp"
+            android:textColor="#08918B"
+            android:layout_column="47"
+            android:layout_marginLeft="20dp" />
+
+    </TableRow>
+</TableLayout>

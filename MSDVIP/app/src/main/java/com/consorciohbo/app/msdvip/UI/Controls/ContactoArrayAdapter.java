@@ -22,20 +22,20 @@ import java.util.ArrayList;
 public class ContactoArrayAdapter extends ArrayAdapter<ContactosBE>{
     private LayoutInflater inflater;
     private Context context;
-    private ArrayList<ContactosBE> contactosBEs;
+    private ArrayList<ContactosBE> lstcontactosBEs;
 
-    public ContactoArrayAdapter(Activity context, LayoutInflater inflater, ArrayList<ContactosBE> contactosBEs
+    public ContactoArrayAdapter(Activity context, LayoutInflater inflater, ArrayList<ContactosBE> lstcontactosBEs
                                 ) {
         super(context, R.layout.list_single_contacto);
         this.context = context;
-        this.contactosBEs = contactosBEs;
+        this.lstcontactosBEs = lstcontactosBEs;
     }
 
     @Override
     public int getCount() {
-        if(contactosBEs == null)
+        if(lstcontactosBEs == null)
             return 0;
-        return contactosBEs.size();
+        return lstcontactosBEs.size();
     }
 
     @Override
@@ -47,9 +47,9 @@ public class ContactoArrayAdapter extends ArrayAdapter<ContactosBE>{
             rowView = inflater.inflate(R.layout.list_single_contacto, null);
             holder = new ViewHolder();
 
-            holder.imageView = (ImageView) rowView.findViewById(R.id.imgFotoContacto);
-            holder.textView = (TextView) rowView.findViewById(R.id.txtNombreContacto);
-            holder.imageButton = (ImageButton) rowView.findViewById(R.id.imageButton);
+            holder.imgContacto = (ImageView) rowView.findViewById(R.id.imgFotoContacto);
+            holder.txtNombreContacto = (TextView) rowView.findViewById(R.id.txtNombreContacto);
+            holder.imgbRedactar = (ImageButton) rowView.findViewById(R.id.imageButton);
 
             rowView.setTag(holder);
 
@@ -59,17 +59,17 @@ public class ContactoArrayAdapter extends ArrayAdapter<ContactosBE>{
         }
         //en este punto, o hemos creado la vista o recuperamos la referencia, rowview Existe
 
-        //holder.imageView.setImageDrawable([enviar el recurso de la imagen]);
-        holder.textView.setText(contactosBEs.get(position).getNombre());
-        //holder.imageButton.setImageDrawable([]);
+        //holder.imgContacto.setImageDrawable([enviar el recurso de la imagen]);
+        holder.txtNombreContacto.setText(lstcontactosBEs.get(position).getNombre());
+        //holder.imgbRedactar.setImageDrawable([]);
 
         return rowView;
     }
 
     public class ViewHolder{
-        public ImageView imageView;
-        public TextView textView;
-        public ImageButton imageButton;
+        public ImageView imgContacto;
+        public TextView txtNombreContacto;
+        public ImageButton imgbRedactar;
 
     }
 }
