@@ -1,10 +1,11 @@
-package com.consorciohbo.app.msdvip;
+package com.consorciohbo.app.msdvip.UI.ControlsViews;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
 import com.consorciohbo.app.msdvip.BL.BE.WebsitesBE;
+import com.consorciohbo.app.msdvip.R;
 import com.consorciohbo.app.msdvip.UI.Controls.WebsitesArrayAdapter;
 
 import java.util.ArrayList;

@@ -67,9 +67,9 @@
         </activity>
         <activity android:name=".UI.ControlsViews.MensajeriaMarketingActivity" >
         </activity>
-        <activity android:name=".SitiosWebActivity" >
+        <activity android:name=".UI.ControlsViews.SitiosWebActivity" >
         </activity>
-        <activity android:name=".MaterialesMedicosActivity" >
+        <activity android:name=".UI.ControlsViews.MaterialesMedicosActivity" >
         </activity>
     </application>
 

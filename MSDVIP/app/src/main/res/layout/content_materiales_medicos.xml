@@ -85,7 +85,7 @@
                     <ListView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:id="@+id/listView" />
+                        android:id="@+id/lstvMaterialesNoDescargados" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -99,7 +99,7 @@
                     <ListView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:id="@+id/listView1" />
+                        android:id="@+id/lstvMaterialesDescargados" />
                 </LinearLayout>
 
             </FrameLayout>

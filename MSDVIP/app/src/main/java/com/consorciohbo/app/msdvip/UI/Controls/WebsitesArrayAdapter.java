@@ -22,7 +22,7 @@ public class WebsitesArrayAdapter extends ArrayAdapter<WebsitesBE> {
     private ArrayList<WebsitesBE> lstWebsitesBEs;
 
     public WebsitesArrayAdapter(Activity contextWebsite, LayoutInflater inflaterWebsite, ArrayList<WebsitesBE> lstWebsitesBEs) {
-        super(contextWebsite, R.layout.row_website);
+        super(contextWebsite, R.layout.list_single_website);
         this.contextWebsite = contextWebsite;
         this.lstWebsitesBEs = lstWebsitesBEs;
     }
@@ -41,7 +41,7 @@ public class WebsitesArrayAdapter extends ArrayAdapter<WebsitesBE> {
         View rowView = convertView;
 
         if (rowView == null) {
-            rowView = inflaterWebsite.inflate(R.layout.row_website, null);
+            rowView = inflaterWebsite.inflate(R.layout.list_single_website, null);
             holder = new ViewHolder();
 
             holder.txtvUrlWebsite = (TextView) rowView.findViewById(R.id.txturlPagina);
