@@ -23,7 +23,8 @@
             <TabWidget android:layout_width="match_parent"
                 android:layout_height="73dp"
                 android:id="@android:id/tabs"
-                android:background="@drawable/imgeventos"/>
+                android:background="@drawable/imgeventos"
+                android:onClick="init" />
 
             <FrameLayout android:layout_width="match_parent"
                 android:layout_height="match_parent"

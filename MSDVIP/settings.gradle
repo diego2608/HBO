@@ -1,1 +1,1 @@
-include ':app', ':showcaseviewlibrary'
+include ':app', ':showcaseviewlibrary', ':library'
