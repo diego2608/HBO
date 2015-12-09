@@ -34,10 +34,16 @@ public class MaterialDialog {
     private AlertDialog mAlertDialog;
     private MaterialDialog.Builder mBuilder;
     private View mView;
+    //-------------
     private int mTitleResId;
     private CharSequence mTitle;
+    private int mSubTitleId;
+    private CharSequence mSubTitle;
     private int mMessageResId;
     private CharSequence mMessage;
+    private int mTimeId;
+    private CharSequence mMessageTime;
+    //-----------------------
     private Button mPositiveButton;
     private LinearLayout.LayoutParams mLayoutParams;
     private Button mNegativeButton;
@@ -154,6 +160,40 @@ public class MaterialDialog {
     }
 
 
+    public MaterialDialog setSubTitle(int resId) {
+        mSubTitleId = resId;
+        if (mBuilder != null) {
+            mBuilder.setSubTitle(resId);
+        }
+        return this;
+    }
+
+
+    public MaterialDialog setSubTitle(CharSequence subtitle) {
+        mSubTitle = subtitle;
+        if (mBuilder != null) {
+            mBuilder.setSubTitle(subtitle);
+        }
+        return this;
+    }
+
+    public MaterialDialog setTimeMessage(int resId) {
+        mTimeId = resId;
+        if (mBuilder != null) {
+            mBuilder.setTimeMessage(resId);
+        }
+        return this;
+    }
+
+
+    public MaterialDialog setTimeMessage(CharSequence timeMessage) {
+        mMessageTime = timeMessage;
+        if (mBuilder != null) {
+            mBuilder.setTitle(timeMessage);
+        }
+        return this;
+    }
+
     public MaterialDialog setMessage(int resId) {
         mMessageResId = resId;
         if (mBuilder != null) {
@@ -229,6 +269,7 @@ public class MaterialDialog {
 
         private TextView mTitleView;
         private ViewGroup mMessageContentRoot;
+
         private TextView mMessageView;
         private Window mAlertDialogWindow;
         private LinearLayout mButtonLayout;
@@ -267,7 +308,7 @@ public class MaterialDialog {
             mPositiveButton = (Button) mButtonLayout.findViewById(R.id.btn_p);
             mNegativeButton = (Button) mButtonLayout.findViewById(R.id.btn_n);
             mMessageContentRoot = (ViewGroup) mAlertDialogWindow.findViewById(
-                    R.id.message_content_root);
+                    R.id.message_content_view);
             if (mView != null) {
                 LinearLayout linearLayout
                         = (LinearLayout) mAlertDialogWindow.findViewById(
@@ -381,7 +422,29 @@ public class MaterialDialog {
                 mMessageView.setText(message);
             }
         }
+        public void setSubTitle(int resId) {
+            if (mMessageView != null) {
+                mMessageView.setText(resId);
+            }
+        }
 
+
+        public void setSubTitle(CharSequence message) {
+            if (mMessageView != null) {
+                mMessageView.setText(message);
+            }
+        } public void setTimeMessage(int resId) {
+            if (mMessageView != null) {
+                mMessageView.setText(resId);
+            }
+        }
+
+
+        public void setTimeMessage(CharSequence message) {
+            if (mMessageView != null) {
+                mMessageView.setText(message);
+            }
+        }
 
         /**
          * set positive button
