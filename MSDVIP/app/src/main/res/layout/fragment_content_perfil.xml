@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:focusable="false"
+        android:src="@drawable/imgwebs"
+        android:tint="#d25b606c"
+        android:tintMode="multiply" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Jose Luis Garcia Linares"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView11"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text="Pediatria"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnCerrarSesión"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView9">
+
+        <LinearLayout
+            android:id="@+id/linearLayout10"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"
+            android:background="#D1CFCF"
+            android:orientation="vertical"></LinearLayout>
+        <!--Mis datos-->
+
+        <LinearLayout
+            android:id="@+id/content_misDatos"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayout10"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:src="@drawable/imgmisdatos"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:clickable="false"
+                android:text="Mis Datos"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#8a9097"
+                android:textSize="16sp"
+                android:layout_marginRight="17dp" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="15dp"
+                android:clickable="false"
+                android:text=">"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#8a9097" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout11"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/content_misDatos"
+            android:layout_marginTop="1dp"
+            android:background="#D1CFCF"
+            android:orientation="vertical" />
+
+        <!--Seguimiento-->
+
+        <LinearLayout
+            android:id="@+id/linearLayout12"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:layout_alignTop="@+id/linearLayout11"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:src="@drawable/imgseguimiento"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:clickable="false"
+                android:text="Seguimiento de mis afiliaciones"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#8a9097"
+                android:textSize="16sp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="15dp"
+                android:clickable="false"
+                android:text=">"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#8a9097" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout13"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#D1CFCF"
+            android:orientation="vertical"
+            android:layout_below="@+id/linearLayout12"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="3dp" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnCerrarSesión"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:textColor="#FFFFFF"
+        android:text="Cerrar Sesión"
+        android:background="@drawable/buttonshapecerrarsesion"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:foregroundGravity="center" />
+
+</RelativeLayout>

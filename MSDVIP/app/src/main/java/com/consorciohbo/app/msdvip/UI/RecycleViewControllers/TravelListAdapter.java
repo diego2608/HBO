@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.consorciohbo.app.msdvip.BL.BE.Place;
+import com.consorciohbo.app.msdvip.BL.BE.CardBE;
 import com.consorciohbo.app.msdvip.R;
 import com.squareup.picasso.Picasso;
 
@@ -43,22 +43,22 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.Vi
 
     @Override
     public int getItemCount() {
-        return new PlaceData().placeList().size();
+        return new ComunicacionData().placeList().size();
     }
 
     // 2
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_places, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_list_cards, parent, false);
         return new ViewHolder(view);
     }
 
     // 3
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        final Place place = new PlaceData().placeList().get(position);
-        holder.placeName.setText(place.name);
-        Picasso.with(mContext).load(place.getImageResourceId(mContext)).into(holder.placeImage);
+        final CardBE cardBE = new ComunicacionData().placeList().get(position);
+        holder.placeName.setText(cardBE.name);
+        Picasso.with(mContext).load(cardBE.getImageResourceId(mContext)).into(holder.placeImage);
     }
 
 }

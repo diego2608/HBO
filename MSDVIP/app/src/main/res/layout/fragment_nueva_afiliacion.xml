@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ingresa el número de tu paciente"
+        android:id="@+id/textView31"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:foregroundGravity="center" />
+
+    <EditText
+        android:id="@+id/txtvAfiliacionPhone"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/edittext_rounded_white"
+        android:ems="10"
+        android:hint="Ejm: 985668790"
+        android:inputType="number"
+        android:maxLength="15"
+        android:backgroundTint="@color/gris"
+        android:paddingLeft="15dp"
+        android:layout_below="@+id/textView31"
+        android:layout_centerHorizontal="true"
+        android:foregroundGravity="center" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comunicarse dentro de    "
+        android:id="@+id/swEstadoComunicarse"
+        android:layout_marginTop="53dp"
+        android:checked="false"
+        android:foregroundGravity="center"
+        android:textSize="16sp"
+        android:layout_below="@+id/txtvAfiliacionPhone"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/drpTiemposComunicarse"
+        android:background="@drawable/spinnershape"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/txtvAfiliacionPhone"
+        android:layout_alignStart="@+id/txtvAfiliacionPhone"
+        android:layout_alignRight="@+id/txtvAfiliacionPhone"
+        android:layout_alignEnd="@+id/txtvAfiliacionPhone"
+        android:spinnerMode="dropdown"
+        android:foregroundGravity="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:textColor="#55B3AF"
+        android:background="@drawable/buttoniniciarsesionshape"
+        android:id="@+id/btnEnviarSMSCliente"
+        android:layout_below="@+id/drpTiemposComunicarse"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:textSize="16sp" />
+
+</RelativeLayout>

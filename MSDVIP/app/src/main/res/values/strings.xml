@@ -23,8 +23,9 @@
     <string name="comunicacion_string">Comunicación</string>
     <string name="servicios_string">Servicios</string>
     <string name="perfil_string">Perfil</string>
-
+    <string name="nuevaafuliacion_string">Nueva Afiliación</string>
 <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="closeDrawer">Navigation View</string>

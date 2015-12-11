@@ -5,7 +5,7 @@ import android.content.Context;
 /**
  * Created by Diego on 25/11/15.
  */
-public class Place {
+public class CardBE {
     public String id;
     public String name;
     public String imageName;

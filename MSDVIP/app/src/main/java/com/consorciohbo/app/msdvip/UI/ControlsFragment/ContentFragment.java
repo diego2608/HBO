@@ -17,7 +17,7 @@ public class ContentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View viewFragment = inflater.inflate(R.layout.fragment_content,container,false);
+        View viewFragment = inflater.inflate(R.layout.fragment_content_comunicacion,container,false);
 
         return viewFragment;
     }

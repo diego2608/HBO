@@ -4,5 +4,7 @@
     <color name="PrimaryColor">#04716d</color>
     <color name="PrimaryDarkColor">#05635d</color>
     <color name="light_white">#ffff</color>
+    <color name='blanco'>#FFF</color>
+    <color name='gris'>#CCC</color>
 
 </resources>

@@ -12,38 +12,42 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/fondomedico"
-        app:border_color="#FF000000"
-        android:layout_marginLeft="24dp"
-        android:layout_centerVertical="true"
+        app:border_color="#08918B"
+        app:border_width="2dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_above="@+id/username"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="24dp" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Akash Bangad"
         android:textSize="14sp"
-        android:textColor="#FFF"
+        android:textColor="#080000"
         android:textStyle="bold"
         android:gravity="left"
         android:paddingBottom="4dp"
         android:id="@+id/username"
-        android:layout_above="@+id/email"
+        android:layout_above="@+id/email_user_menu"
         android:layout_alignLeft="@+id/profile_image"
-        android:layout_alignStart="@+id/profile_image" />
+        android:layout_alignStart="@+id/profile_image"
+        android:layout_marginTop="5dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Akash.bangad93@gmail.com"
-        android:id="@+id/email"
+        android:id="@+id/email_user_menu"
         android:gravity="left"
+        android:textStyle="bold"
         android:layout_marginBottom="8dp"
         android:textSize="14sp"
-        android:textColor="#fff"
+        android:textColor="#080000"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/username"
-        android:layout_alignStart="@+id/username" />
+        android:layout_alignStart="@+id/username"
+        android:layout_marginTop="2dp" />
 
 </RelativeLayout>

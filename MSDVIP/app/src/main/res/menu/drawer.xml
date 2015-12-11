@@ -5,7 +5,7 @@
 
         <item
             android:id="@+id/comunicacion"
-            android:checked="false"
+            android:checked="true"
             android:icon="@drawable/imgcomunicacionseleccionado"
             android:title="@string/comunicacion_string" />
 
@@ -16,6 +16,12 @@
             android:title="@string/servicios_string" />
 
         <item
+            android:id="@+id/NuevaAfiliacion"
+            android:checked="false"
+            android:icon="@drawable/btnafiliadonoseleccionado"
+            android:title="@string/nuevaafuliacion_string" />
+
+        <item
             android:id="@+id/perfil"
             android:checked="false"
             android:icon="@drawable/imgperfilnoseleccionado"
@@ -23,4 +29,6 @@
 
 
     </group>
+
+
 </menu>

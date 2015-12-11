@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
                         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.frame, fragment);
+
                         fragmentTransaction.commit();
                         return true;
 
@@ -77,6 +78,9 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Servicios", Toast.LENGTH_SHORT).show();
                         return true;
 
+                    case R.id.NuevaAfiliacion:
+                        Toast.makeText(getApplicationContext(), "Nueva Afiliación", Toast.LENGTH_SHORT).show();
+                        return true;
 
                     case R.id.perfil:
                         Toast.makeText(getApplicationContext(), "Perfil", Toast.LENGTH_SHORT).show();
@@ -114,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
     //---------------------------------------------------------------------------------------------------------------
         //Codigo del listview
-        mRecyclerView = (RecyclerView) findViewById(R.id.list);
+        mRecyclerView = (RecyclerView) findViewById(R.id.listComunicacion);
         mStaggeredLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(mStaggeredLayoutManager);
         mAdapter = new TravelListAdapter(this);

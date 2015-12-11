@@ -19,28 +19,20 @@
             layout="@layout/tool_bar"
             />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Dr. Jorge Luis"
-            android:id="@+id/textView11" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Elige con que area deseas comunicarte"
-            android:id="@+id/textView12" />
 
-        <FrameLayout
+
+      <FrameLayout
             android:id="@+id/frame"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/list"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/light_white"/>
+          <android.support.v7.widget.RecyclerView
+              android:id="@+id/listComunicacion"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/light_white"/>
+
 
         </FrameLayout>
 
