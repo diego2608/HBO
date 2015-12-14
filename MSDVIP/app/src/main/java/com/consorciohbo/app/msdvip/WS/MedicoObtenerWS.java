@@ -1,9 +1,12 @@
 package com.consorciohbo.app.msdvip.WS;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.AsyncTask;
 
 import com.consorciohbo.app.msdvip.BL.BE.MedicoBE;
 import com.consorciohbo.app.msdvip.FL.Utility;
+import com.consorciohbo.app.msdvip.UI.ControlsViews.LoginActivity;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -18,6 +21,8 @@ import org.json.JSONObject;
  * Created by Diego on 11/12/15.
  */
 public class MedicoObtenerWS extends AsyncTask<String, Integer, MedicoBE> {
+    private Context mContext;
+    private ProgressDialog mProgress;
     Utility objUtility = new Utility();
     @Override
     protected MedicoBE doInBackground(String... params) {
@@ -62,4 +67,13 @@ public class MedicoObtenerWS extends AsyncTask<String, Integer, MedicoBE> {
         }
         return medico;
     }
+
+    @Override
+    protected void onPreExecute() {
+        mProgress = ProgressDialog.show(mContext, "Membership", "Ingresando");
+        mProgress.setCancelable(false);
+        super.onPreExecute();
+    }
+
+
 }

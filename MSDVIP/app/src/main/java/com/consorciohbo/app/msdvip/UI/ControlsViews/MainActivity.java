@@ -2,11 +2,10 @@ package com.consorciohbo.app.msdvip.UI.ControlsViews;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,7 +14,6 @@ import android.widget.Toast;
 
 import com.consorciohbo.app.msdvip.R;
 import com.consorciohbo.app.msdvip.UI.ControlsFragment.ContentFragment;
-import com.consorciohbo.app.msdvip.UI.RecycleViewControllers.TravelListAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,11 +21,16 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
+    private FragmentManager fm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        fm = getSupportFragmentManager();
+
         //---------------------------------------------------------------
         //Codigo del toolbar
         //inicializamos el toolbar y ajustes en el action bar
@@ -74,16 +77,21 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.servicios:
                         Toast.makeText(getApplicationContext(), "Servicios", Toast.LENGTH_SHORT).show();
                         getSupportActionBar().setTitle("Servicios");
+                        //      fm.beginTransaction().replace(R.id.frame, new fragment_content_servicios(), "TAG_Servicios").addToBackStack("Login").commit();
                         return true;
 
                     case R.id.NuevaAfiliacion:
                         Toast.makeText(getApplicationContext(), "Nueva Afiliación", Toast.LENGTH_SHORT).show();
                         getSupportActionBar().setTitle("Nueva Afiliación");
+                        //  fm.beginTransaction().replace(R.id.frame, new LogInFragment(), "TAG_Afiliacion").addToBackStack("Login").commit()
                         return true;
 
                     case R.id.perfil:
                         Toast.makeText(getApplicationContext(), "Perfil", Toast.LENGTH_SHORT).show();
+                        //  fm.beginTransaction().replace(R.id.frame, new LogInFragment(), "TAG_Perfil").addToBackStack("Login").commit()
                         getSupportActionBar().setTitle("Perfil");
+
+
                         return true;
 
                 }
@@ -104,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDrawerOpened(View drawerView) {
                 // Code here will be triggered once the drawer open as we dont want anything to happen so we leave this blank
-
                 super.onDrawerOpened(drawerView);
             }
         };
@@ -116,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
 
 
-    //---------------------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------------------
         //Codigo del listview
 
         ContentFragment fragment = new ContentFragment();

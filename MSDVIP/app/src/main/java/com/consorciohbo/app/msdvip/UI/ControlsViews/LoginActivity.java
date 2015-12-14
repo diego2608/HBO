@@ -5,11 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.consorciohbo.app.msdvip.R;
+import com.consorciohbo.app.msdvip.WS.MedicoObtenerWS;
 
 public class LoginActivity extends AppCompatActivity {
-
+    private EditText txtLoginCMD;
+    private EditText txtPasswordCMD;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,4 +33,6 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+
+
 }

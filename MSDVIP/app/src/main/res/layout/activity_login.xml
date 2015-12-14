@@ -85,6 +85,7 @@
         android:layout_marginTop="30dp"
         android:layout_below="@+id/txtPasswordLogin"
         android:layout_centerHorizontal="true"
-        android:gravity="center|center_vertical|center_horizontal" />
+        android:gravity="center|center_vertical|center_horizontal"
+        android:onClick="login" />
 
 </RelativeLayout>
