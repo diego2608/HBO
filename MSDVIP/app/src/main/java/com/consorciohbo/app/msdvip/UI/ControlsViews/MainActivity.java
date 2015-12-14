@@ -23,10 +23,6 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
-    private RecyclerView mRecyclerView;
-    private TravelListAdapter mAdapter;
-
-    private StaggeredGridLayoutManager mStaggeredLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,12 +59,13 @@ public class MainActivity extends AppCompatActivity {
                     //Replacing the main content with ContentFragment Which is our Inbox View;
                     case R.id.comunicacion:
                         Toast.makeText(getApplicationContext(), "Comunicacion", Toast.LENGTH_SHORT).show();
+                        //-------
+                        getSupportActionBar().setTitle("Comunicacion");
                         ContentFragment fragment = new ContentFragment();
-
                         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.frame, fragment);
-
                         fragmentTransaction.commit();
+
                         return true;
 
 
@@ -76,14 +73,17 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.servicios:
                         Toast.makeText(getApplicationContext(), "Servicios", Toast.LENGTH_SHORT).show();
+                        getSupportActionBar().setTitle("Servicios");
                         return true;
 
                     case R.id.NuevaAfiliacion:
                         Toast.makeText(getApplicationContext(), "Nueva Afiliación", Toast.LENGTH_SHORT).show();
+                        getSupportActionBar().setTitle("Nueva Afiliación");
                         return true;
 
                     case R.id.perfil:
                         Toast.makeText(getApplicationContext(), "Perfil", Toast.LENGTH_SHORT).show();
+                        getSupportActionBar().setTitle("Perfil");
                         return true;
 
                 }
@@ -118,11 +118,14 @@ public class MainActivity extends AppCompatActivity {
 
     //---------------------------------------------------------------------------------------------------------------
         //Codigo del listview
-        mRecyclerView = (RecyclerView) findViewById(R.id.listComunicacion);
-        mStaggeredLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
-        mRecyclerView.setLayoutManager(mStaggeredLayoutManager);
-        mAdapter = new TravelListAdapter(this);
-        mRecyclerView.setAdapter(mAdapter);
+
+        ContentFragment fragment = new ContentFragment();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.frame, fragment);
+
+        getSupportActionBar().setTitle("Comunicacion");
+
+        fragmentTransaction.commit();
 
     }
     //---------------
