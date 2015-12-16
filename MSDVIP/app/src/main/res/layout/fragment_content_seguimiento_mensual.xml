@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnEnero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshapeseguimiento"
+                android:text="Enero"
+                android:textColor="#878787" />
+
+            <Button
+                android:id="@+id/btnFebrero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshapeseguimiento"
+                android:text="Febrero"
+                android:textColor="#878787" />
+
+            <Button
+                android:id="@+id/btnMarzo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshapeseguimiento"
+                android:text="Marzo"
+                android:textColor="#878787" />
+
+            <Button
+                android:id="@+id/btnAbril"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshapeseguimiento"
+                android:text="Abril"
+                android:textColor="#878787" />
+
+            <Button
+                android:id="@+id/btnMayo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshapeseguimiento"
+                android:text="Mayo"
+                android:textColor="#878787" />
+
+            <Button
+                android:id="@+id/btnJunio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshapeseguimiento"
+                android:text="Junio"
+                android:textColor="#878787" />
+
+            <Button
+                android:id="@+id/btnJulio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshapeseguimiento"
+                android:text="Julio"
+                android:textColor="#878787" />
+
+            <Button
+                android:id="@+id/btnAgosto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshapeseguimiento"
+                android:text="Agosto"
+                android:textColor="#878787" />
+
+            <Button
+                android:id="@+id/btnSeptiembre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshapeseguimiento"
+                android:text="Septiembre"
+                android:textColor="#878787" />
+
+            <Button
+                android:id="@+id/btnOctubre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshapeseguimiento"
+                android:text="Octubre"
+                android:textColor="#878787" />
+
+            <Button
+                android:id="@+id/btnNoviembre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshapeseguimiento"
+                android:text="Noviembre"
+                android:textColor="#878787" />
+
+            <Button
+                android:id="@+id/btnDiciembre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonshapeseguimiento"
+                android:text="Diciembre"
+                android:textColor="#878787" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/horizontalScrollView"
+        android:src="@drawable/imghoy_mensual" />
+
+    <TextView
+        android:id="@+id/lblCantPacientesMes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView13"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:text="45"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="60sp" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblCantPacientesMes"
+        android:layout_centerHorizontal="true"
+        android:text="Pacientes Enviados"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/imageView13"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="38dp"
+        android:background="#bababa"
+        android:id="@+id/linearLayout14"></LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#bababa"
+        android:id="@+id/linearLayout15"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout14"
+        android:id="@+id/relativeLayout2"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@+id/lblCantPacientesAfiliadosMes"
+        android:layout_toStartOf="@+id/lblCantPacientesAfiliadosMes">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBarAfiliadosMes"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:indeterminate="false"
+            android:max="10000"
+            android:progressDrawable="@drawable/circular_progress_potencial"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="70%"
+            android:id="@+id/lblPorcentajeAfiliadosMes"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout15"
+        android:layout_alignRight="@+id/relativeLayout2"
+        android:layout_alignEnd="@+id/relativeLayout2"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/relativeLayout3">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBarPendientesMes"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_centerHorizontal="true"
+            android:max="10000"
+            android:progressDrawable="@drawable/circular_progress_afiliado"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18%"
+            android:id="@+id/lblPorcentajePendientesMes"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#bababa"
+        android:id="@+id/linearLayout16"
+        android:layout_below="@+id/relativeLayout3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/relativeLayout4"
+        android:layout_below="@+id/linearLayout16"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/relativeLayout3"
+        android:layout_alignEnd="@+id/relativeLayout3"
+        android:layout_marginBottom="10dp">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBarNoAfiliadosMes"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_centerHorizontal="true"
+            android:max="10000"
+            android:progressDrawable="@drawable/circular_progress_afiliado"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08%"
+            android:id="@+id/lblPorcentajeNoAfiliadosMes"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#bababa"
+        android:id="@+id/linearLayout17"
+        android:layout_below="@+id/relativeLayout4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="pacientes Afiliados"
+        android:id="@+id/lblPorcentajeNoAfiliadosAnio"
+        android:textSize="16sp"
+        android:layout_alignBottom="@+id/lblCantPacientesAfiliadosMes"
+        android:layout_toRightOf="@+id/lblCantPacientesAfiliadosMes"
+        android:layout_toEndOf="@+id/lblCantPacientesAfiliadosMes"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="31"
+        android:id="@+id/lblCantPacientesAfiliadosMes"
+        android:layout_alignTop="@+id/relativeLayout2"
+        android:layout_alignLeft="@+id/lblCantPacientesMes"
+        android:layout_alignStart="@+id/lblCantPacientesMes"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="8"
+        android:id="@+id/lblCantidadPendientesMes"
+        android:layout_alignTop="@+id/relativeLayout3"
+        android:layout_toLeftOf="@+id/lblPorcentajeNoAfiliadosAnio"
+        android:layout_toStartOf="@+id/lblPorcentajeNoAfiliadosAnio"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="pacientes pendientes"
+        android:id="@+id/textView44"
+        android:textSize="16sp"
+        android:layout_alignTop="@+id/lblCantidadPendientesMes"
+        android:layout_alignLeft="@+id/lblPorcentajeNoAfiliadosAnio"
+        android:layout_alignStart="@+id/lblPorcentajeNoAfiliadosAnio" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="3"
+        android:id="@+id/lblCantNoAfiliadosMes"
+        android:layout_alignTop="@+id/relativeLayout4"
+        android:layout_alignRight="@+id/lblCantPacientesAfiliadosMes"
+        android:layout_alignEnd="@+id/lblCantPacientesAfiliadosMes"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="pacientes No Afiliados"
+        android:id="@+id/textView40"
+        android:textSize="16sp"
+        android:layout_alignTop="@+id/lblCantNoAfiliadosMes"
+        android:layout_alignLeft="@+id/textView44"
+        android:layout_alignStart="@+id/textView44" />
+
+
+</RelativeLayout>

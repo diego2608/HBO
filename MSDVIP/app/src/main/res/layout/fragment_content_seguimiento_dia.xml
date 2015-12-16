@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView12"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/imghoy_mensual"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="15"
+        android:id="@+id/txtCantPacientes"
+        android:layout_marginTop="34dp"
+        android:textSize="50sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pacientes Enviados"
+        android:id="@+id/textView32"
+        android:layout_below="@+id/txtCantPacientes"
+        android:layout_centerHorizontal="true"
+        android:textSize="13sp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pendiente"
+        android:id="@+id/textView33"
+        android:gravity="center_horizontal"
+        android:textSize="12dp"
+        android:textColor="@color/color_semaforo_amarillo"
+        android:layout_below="@+id/textView32"
+        android:layout_alignRight="@+id/progresBarPendientes"
+        android:layout_alignEnd="@+id/progresBarPendientes"
+        android:layout_alignLeft="@+id/progresBarPendientes"
+        android:layout_alignStart="@+id/progresBarPendientes" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/progresBarPendientes"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:indeterminate="false"
+        android:max="10000"
+        android:progressDrawable="@drawable/circular_progress_potencial"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/textView33"
+        android:layout_toLeftOf="@+id/textView32"
+        android:layout_toStartOf="@+id/textView32"
+        android:layout_marginRight="31dp"
+        android:layout_marginEnd="31dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/progressBarAfiliado"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:max="10000"
+        android:progressDrawable="@drawable/circular_progress_afiliado"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/progresBarPendientes"
+        android:layout_alignLeft="@+id/txtCantPacientes"
+        android:layout_alignStart="@+id/txtCantPacientes"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Afiliado"
+        android:id="@+id/textView34"
+        android:gravity="center_horizontal"
+        android:textSize="12dp"
+        android:textColor="@color/color_semaforo_verde"
+        android:layout_above="@+id/progressBarAfiliado"
+        android:layout_alignLeft="@+id/progressBarAfiliado"
+        android:layout_alignStart="@+id/progressBarAfiliado"
+        android:layout_alignRight="@+id/progressBarAfiliado"
+        android:layout_alignEnd="@+id/progressBarAfiliado" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Afiliado"
+        android:id="@+id/textView35"
+        android:gravity="center_horizontal"
+        android:textSize="12dp"
+        android:textColor="@color/color_semaforo_rojo"
+        android:layout_below="@+id/textView32"
+        android:layout_alignRight="@+id/progressBarNoAfiliado"
+        android:layout_alignEnd="@+id/progressBarNoAfiliado"
+        android:layout_alignBottom="@+id/textView34"
+        android:layout_alignLeft="@+id/progressBarNoAfiliado"
+        android:layout_alignStart="@+id/progressBarNoAfiliado" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:id="@+id/progressBarNoAfiliado"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:max="10000"
+        android:progressDrawable="@drawable/circular_progress_noafiliado"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/textView34"
+        android:layout_toRightOf="@+id/textView32"
+        android:layout_toEndOf="@+id/textView32"
+        android:layout_marginLeft="34dp"
+        android:layout_marginStart="34dp"
+        android:indeterminate="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="15"
+        android:id="@+id/lblCantPendientes"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:textColor="#080808"
+        android:textSize="13sp"
+        android:layout_alignTop="@+id/progresBarPendientes"
+        android:layout_alignLeft="@+id/progresBarPendientes"
+        android:layout_alignStart="@+id/progresBarPendientes"
+        android:layout_marginTop="21dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="15"
+        android:id="@+id/lblCantAfiliado"
+        android:textColor="#080808"
+        android:textSize="13sp"
+        android:layout_alignTop="@+id/lblCantPendientes"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="15"
+        android:id="@+id/lblCantNoAfiliado"
+        android:textColor="#080808"
+        android:textSize="13sp"
+        android:layout_alignTop="@+id/lblCantAfiliado"
+        android:layout_alignLeft="@+id/progressBarNoAfiliado"
+        android:layout_alignStart="@+id/progressBarNoAfiliado"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:id="@+id/txtBuscarPacienteNum"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/txtcmp"
+        android:imeOptions="actionDone"
+        android:hint="Buscar"
+        android:gravity="center_horizontal"
+        android:textSize="14dp"
+        android:singleLine="true"
+        android:layout_below="@+id/imageView12"
+        android:layout_alignLeft="@+id/progresBarPendientes"
+        android:layout_alignStart="@+id/progresBarPendientes"
+        android:layout_alignRight="@+id/progressBarAfiliado"
+        android:layout_alignEnd="@+id/progressBarAfiliado" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Todos"
+        android:textAllCaps="false"
+        android:id="@+id/button"
+        android:background="@drawable/btncolorprincipal"
+        android:textColor="@color/color_principal"
+        android:textSize="12dp"
+        android:layout_alignTop="@+id/txtBuscarPacienteNum"
+        android:layout_alignLeft="@+id/progressBarNoAfiliado"
+        android:layout_alignStart="@+id/progressBarNoAfiliado"
+        android:layout_alignRight="@+id/progressBarNoAfiliado"
+        android:layout_alignEnd="@+id/progressBarNoAfiliado" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Fecha"
+        android:id="@+id/textView36"
+        android:textSize="13sp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/txtBuscarPacienteNum"
+        android:layout_alignStart="@+id/txtBuscarPacienteNum" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Número de Contacto"
+        android:id="@+id/textView37"
+        android:layout_alignTop="@+id/textView36"
+        android:layout_centerHorizontal="true"
+        android:textSize="13sp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView2"
+        android:layout_below="@+id/textView36"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

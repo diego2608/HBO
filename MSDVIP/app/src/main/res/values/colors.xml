@@ -6,5 +6,13 @@
     <color name="light_white">#ffff</color>
     <color name='blanco'>#FFF</color>
     <color name='gris'>#CCC</color>
+    <color name="color_principal">#19D3FA</color>
+    <color name="color_secundario">#13A0BE</color>
+    <color name='color_gris'>#99D2DEE0</color>
 
+    <color name="color_textbox">#E2E5E5</color>
+
+    <color name="color_semaforo_amarillo">#F8E71C</color>
+    <color name="color_semaforo_rojo">#FF0000</color>
+    <color name="color_semaforo_verde">#00CC3A</color>
 </resources>
