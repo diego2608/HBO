@@ -46,12 +46,12 @@ public class Utility {
     //---------------------------------------------------------------
 
     public static String getDatabaseFolderPath() {
-        return "/data/data/com.consorciohbo.membership/databases/";
+        return "/data/data/com.consorciohbo.msdvip/databases/";
     }
     //---------------------------------------------------------------
 
     public static String getDatabasePath() {
-        return "/data/data/com.consorciohbo.membership/databases/HBOMembership.sqlite";
+        return "/data/data/com.consorciohbo.membership/databases/HBOMsdvip.sqlite";
     }
     //---------------------------------------------------------------
 

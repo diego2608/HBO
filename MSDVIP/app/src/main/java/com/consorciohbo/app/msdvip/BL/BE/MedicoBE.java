@@ -14,6 +14,8 @@ public class MedicoBE {
     private String Especialidad;
     private String Nombre;
     private String Apellido;
+    private String EstadoActivacion;
+
 
     public MedicoBE() {
     }
@@ -28,6 +30,14 @@ public class MedicoBE {
         CMP = cMP;
         Password = password;
         Especialidad = especialidad;
+    }
+
+    public String getEstadoActivacion() {
+        return EstadoActivacion;
+    }
+
+    public void setEstadoActivacion(String estadoActivacion) {
+        EstadoActivacion = estadoActivacion;
     }
 
     public String getMedicoID() {

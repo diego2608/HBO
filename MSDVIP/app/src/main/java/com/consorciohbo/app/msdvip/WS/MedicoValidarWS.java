@@ -1,9 +1,12 @@
 package com.consorciohbo.app.msdvip.WS;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.AsyncTask;
 
 import com.consorciohbo.app.msdvip.BL.BE.MedicoBE;
 import com.consorciohbo.app.msdvip.FL.Utility;
+import com.consorciohbo.app.msdvip.UI.ControlsViews.LoginActivity;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -19,13 +22,21 @@ import org.json.JSONObject;
  */
 public class MedicoValidarWS extends AsyncTask<String, Integer, String> {
     Utility objUtility = new Utility();
+    private Context mContext;
+    private ProgressDialog mProgress;
+
+
+    public MedicoValidarWS(Context mContext) {
+        this.mContext = mContext;
+    }
 
     @Override
     protected String doInBackground(String... params) {
+        // TODO Auto-generated method stub
         String result = "";
         HttpClient client =  new DefaultHttpClient();
 
-        HttpPost request = new HttpPost("https://mobile.consorciohbo.com.pe/HBOMembership.WebService/MedicoWS.svc/MedicoObtenerPorProgramaIDYCMP");
+        HttpPost request = new HttpPost("https://mobile.consorciohbo.com.pe/HBOMembership.WebService.Test/MedicoWS.svc/MedicoObtenerPorProgramaIDYCMP");
         request.setHeader("content-type","application/json");
 
         try {
@@ -51,8 +62,6 @@ public class MedicoValidarWS extends AsyncTask<String, Integer, String> {
                 medico.setEmail(jsonReponse.getString("Email"));
                 medico.setCMP(jsonReponse.getString("CMP"));
                 medico.setPassword(jsonReponse.getString("Password"));
-                //----
-                medico = objUtility.DivCompleteName(medico);
 
                 if(medico.getPassword() == "null" || medico.getPassword().isEmpty() || medico.getPassword() == null){
                     result = "nopassword";
@@ -69,5 +78,18 @@ public class MedicoValidarWS extends AsyncTask<String, Integer, String> {
             result = "failure";
         }
         return result;
+    }
+
+    @Override
+    protected void onPreExecute() {
+        mProgress = ProgressDialog.show(mContext, "MSDVip", "Validando Médico");
+        mProgress.setCancelable(false);
+        super.onPreExecute();
+    }
+
+    @Override
+    protected void onPostExecute(String result) {
+        mProgress.dismiss();
+        super.onPostExecute(result);
     }
 }

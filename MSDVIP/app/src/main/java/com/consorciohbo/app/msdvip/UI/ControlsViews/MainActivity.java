@@ -1,5 +1,8 @@
 package com.consorciohbo.app.msdvip.UI.ControlsViews;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
@@ -12,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.consorciohbo.app.msdvip.BL.BE.MedicoBE;
 import com.consorciohbo.app.msdvip.R;
 import com.consorciohbo.app.msdvip.UI.ControlsFragment.ContentFragment;
 
@@ -159,5 +163,43 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    public void medicoObtenerOnComplete(final MedicoBE resultado) throws Exception {
+        if (resultado != null) {
+
+            if (resultado.getEstadoActivacion().equals("ACTIVO")) {
+
+                final Intent intent = new Intent(this, PerfilpageActivity.class);
+                new AlertDialog.Builder(this)
+                        .setTitle("Mensaje")
+                        .setMessage("Se ha activado el uso del aplicativo. Bienvenido")
+                        .setPositiveButton("Iniciar", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                intent.putExtra("MedicoExternoID", resultado.getMedicoExternoID());
+                                intent.putExtra("NombreCompleto", resultado.getNombreCompleto());
+                                intent.putExtra("Telefono", resultado.getTelefono());
+                                intent.putExtra("Email", resultado.getEmail());
+                                intent.putExtra("CMP", resultado.getCMP());
+                                intent.putExtra("Password", resultado.getPassword());
+                                startActivity(intent);
+                            }
+                        })
+                        .show();
+
+            } else {
+                new AlertDialog.Builder(this)
+                        .setTitle("Mensaje")
+                        .setMessage("Su cuenta aun no ha sido activada")
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        })
+                        .show();
+            }
+
+        } else {
+            Toast.makeText(this, "Hubo un inconveniente. Por favor vuelva a intentar", Toast.LENGTH_SHORT).show();
+        }
+    }
 }
 

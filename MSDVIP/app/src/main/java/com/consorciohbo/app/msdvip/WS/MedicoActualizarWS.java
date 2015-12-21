@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 
 import com.consorciohbo.app.msdvip.BL.BE.MedicoBE;
 import com.consorciohbo.app.msdvip.FL.Utility;
+import com.consorciohbo.app.msdvip.UI.ControlsViews.PerfilpageActivity;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -20,8 +21,14 @@ import org.json.JSONObject;
  */
 public class MedicoActualizarWS extends AsyncTask<MedicoBE, Integer, String> {
     Utility objUtility = new Utility();
+    private PerfilpageActivity mContext;
 
     private ProgressDialog mProgress;
+
+    public MedicoActualizarWS(PerfilpageActivity mContext) {
+        this.mContext = mContext;
+    }
+
     @Override
     protected String doInBackground(MedicoBE... params) {
         String result = "";
@@ -63,4 +70,22 @@ public class MedicoActualizarWS extends AsyncTask<MedicoBE, Integer, String> {
         return result;
     }
 
+    @Override
+    protected void onPostExecute(String result) {
+        mProgress.dismiss();
+        super.onPostExecute(result);
+
+        try {
+            mContext.medicoActualizarOnComplete(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void onPreExecute() {
+        mProgress = ProgressDialog.show(mContext.getApplication(), "MSDVIP", "Actualizando Datos");
+        mProgress.setCancelable(false);
+        super.onPreExecute();
+    }
 }

@@ -1,5 +1,7 @@
 package com.consorciohbo.app.msdvip.WS;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.AsyncTask;
 
 import com.consorciohbo.app.msdvip.BL.BE.MedicoBE;
@@ -19,6 +21,14 @@ import org.json.JSONObject;
  */
 public class MedicoObtenerCompletoWS extends AsyncTask<String, Integer, MedicoBE> {
     Utility objUtility = new Utility();
+
+    private Context mContext;
+    private ProgressDialog mProgress;
+
+    public MedicoObtenerCompletoWS(Context mContext) {
+        this.mContext = mContext;
+    }
+
     @Override
     protected MedicoBE doInBackground(String... params) {
         MedicoBE medico = new MedicoBE();
@@ -60,5 +70,18 @@ public class MedicoObtenerCompletoWS extends AsyncTask<String, Integer, MedicoBE
             medico = null;
         }
         return medico;
+    }
+
+    @Override
+    protected void onPreExecute() {
+        mProgress = ProgressDialog.show(mContext, "MSDVip", "Ingresando");
+        mProgress.setCancelable(false);
+        super.onPreExecute();
+    }
+
+    @Override
+    protected void onPostExecute(MedicoBE result) {
+        mProgress.dismiss();
+        super.onPostExecute(result);
     }
 }

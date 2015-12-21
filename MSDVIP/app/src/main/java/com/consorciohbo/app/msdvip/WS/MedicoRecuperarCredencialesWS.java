@@ -1,5 +1,7 @@
 package com.consorciohbo.app.msdvip.WS;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.AsyncTask;
 
 import com.consorciohbo.app.msdvip.FL.Utility;
@@ -18,6 +20,13 @@ import org.json.JSONObject;
  */
 public class MedicoRecuperarCredencialesWS extends AsyncTask<String, Integer, String> {
     Utility objUtility = new Utility();
+
+    private Context mContext;
+    private ProgressDialog mProgress;
+
+    public MedicoRecuperarCredencialesWS(Context mContext) {
+        this.mContext = mContext;
+    }
 
     @Override
     protected String doInBackground(String... params) {
@@ -50,5 +59,18 @@ public class MedicoRecuperarCredencialesWS extends AsyncTask<String, Integer, St
             result = "error";
         }
         return result;
+    }
+
+    @Override
+    protected void onPreExecute() {
+        mProgress = ProgressDialog.show(mContext, "MSDVip", "Recuperando Credenciales");
+        mProgress.setCancelable(false);
+        super.onPreExecute();
+    }
+
+    @Override
+    protected void onPostExecute(String result) {
+        mProgress.dismiss();
+        super.onPostExecute(result);
     }
 }

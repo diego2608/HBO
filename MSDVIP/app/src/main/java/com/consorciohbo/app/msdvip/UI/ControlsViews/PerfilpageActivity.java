@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.consorciohbo.app.msdvip.BL.BC.MedicoBC;
+import com.consorciohbo.app.msdvip.BL.BE.MedicoBE;
 import com.consorciohbo.app.showcaseviewlibrary.MaterialShowcaseView;
 
 import com.consorciohbo.app.msdvip.R;
@@ -27,8 +29,8 @@ public class PerfilpageActivity extends AppCompatActivity implements View.OnClic
     private EditText etxtCorreoFrm;
 
 
-
-
+    private MedicoBE objMedicoBE;
+    private boolean editando;
 
     private static final String SHOWCASE_ID = "simple example";
 
@@ -103,6 +105,17 @@ public class PerfilpageActivity extends AppCompatActivity implements View.OnClic
     private void resetShowcaseView(int withDelay){
         MaterialShowcaseView.resetSingleUse(this, SHOWCASE_ID);
         Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show();
+    }
+
+    public void medicoActualizarOnComplete(String resultado) throws Exception {
+        if (resultado.equals("true")) {
+            MedicoBC.MedicoActualizar(objMedicoBE);
+        } else {
+            Toast.makeText(getApplication(), "Ha ocurrido un error. Por favor intentelo nuevamente", Toast.LENGTH_SHORT).show();
+        }
+
+        editando = !editando;
+
     }
 
 

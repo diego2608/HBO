@@ -1,9 +1,11 @@
 package com.consorciohbo.app.msdvip.WS;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
 import com.consorciohbo.app.msdvip.BL.BE.MedicoBE;
 import com.consorciohbo.app.msdvip.FL.Utility;
+import com.consorciohbo.app.msdvip.UI.ControlsViews.CrearUserActivity;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -19,6 +21,10 @@ import org.json.JSONObject;
  */
 public class MedicoRegistrarWS extends AsyncTask<MedicoBE, Integer, String> {
     Utility objUtility = new Utility();
+
+    private CrearUserActivity mContext;
+    private ProgressDialog mProgress;
+    private MedicoBE objMedicoBE;
 
     @Override
     protected String doInBackground(MedicoBE... params) {
@@ -56,5 +62,24 @@ public class MedicoRegistrarWS extends AsyncTask<MedicoBE, Integer, String> {
             result = "error";
         }
         return result;
+    }
+
+    @Override
+    protected void onPreExecute() {
+        mProgress = ProgressDialog.show(mContext, "MSDVip", "Creando Cuenta");
+        mProgress.setCancelable(false);
+        super.onPreExecute();
+    }
+
+    @Override
+    protected void onPostExecute(String result) {
+        mProgress.dismiss();
+        super.onPostExecute(result);
+
+        try {
+            mContext.medicoRegistrarOnComplete(objMedicoBE, result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

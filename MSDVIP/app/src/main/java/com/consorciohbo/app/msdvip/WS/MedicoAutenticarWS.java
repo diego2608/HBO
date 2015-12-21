@@ -1,9 +1,11 @@
 package com.consorciohbo.app.msdvip.WS;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
 import com.consorciohbo.app.msdvip.BL.BE.MedicoBE;
 import com.consorciohbo.app.msdvip.FL.Utility;
+import com.consorciohbo.app.msdvip.UI.ControlsViews.LoginActivity;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -17,16 +19,23 @@ import org.json.JSONObject;
 /**
  * Created by Diego on 18/11/15.
  */
-public class MedicoAutenticarWS extends AsyncTask<MedicoBE,Integer,String> {
-    @Override
-    protected String doInBackground(MedicoBE... params) {
-        String result = "";
-        Utility objUtility = new Utility();
+public class MedicoAutenticarWS extends AsyncTask<MedicoBE, Integer, MedicoBE> {
+    private LoginActivity mContext;
+    private ProgressDialog mProgress;
+    private Utility objUtility;
 
+
+    public MedicoAutenticarWS(LoginActivity mContext, int a) {
+        this.mContext = mContext;
+    }
+
+    @Override
+    protected MedicoBE doInBackground(MedicoBE... params) {
+        MedicoBE medico = new MedicoBE();
         HttpClient client = new DefaultHttpClient();
 
-        HttpPost request = new HttpPost("https://mobile.consorciohbo.com.pe/HBOMembership.WebService/MedicoWS.svc/MedicoAutenticar");
-        request.setHeader("content-type","application/json");
+        HttpPost request = new HttpPost("https://mobile.consorciohbo.com.pe/HBOMembership.WebService.Test/MedicoWS.svc/MedicoAutenticar");
+        request.setHeader("content-type", "application/json");
 
         try {
             JSONObject data = new JSONObject();
@@ -46,27 +55,42 @@ public class MedicoAutenticarWS extends AsyncTask<MedicoBE,Integer,String> {
 
             try {
                 JSONObject jsonReponse = new JSONObject(responseString);
-
-                MedicoBE medico = new MedicoBE();
                 medico.setMedicoExternoID(jsonReponse.getString("MedicoExternoID"));
                 medico.setNombreCompleto(jsonReponse.getString("NombreCompleto"));
                 medico.setTelefono(jsonReponse.getString("Telefono"));
                 medico.setEmail(jsonReponse.getString("Email"));
                 medico.setCMP(jsonReponse.getString("CMP"));
                 medico.setPassword(jsonReponse.getString("Password"));
-                medico.setEspecialidad(jsonReponse.getString("Especialidad"));
-                medico = objUtility.DivCompleteName(medico);
+                medico.setEstadoActivacion(jsonReponse.getString("EstadoActivacion"));
 
-                return "true";
+                return medico;
+            } catch (Exception ex) {
+                return null;
             }
-            catch (Exception ex){
-                return "false";
-            }
+        } catch (Exception e) {
+            medico = null;
         }
-        catch (Exception e){
-            result = "error";
-        }
+        return medico;
+    }
 
-        return result;
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+
+        mProgress = ProgressDialog.show(mContext, "MSDVip", "Ingresando");
+        mProgress.setCancelable(false);
+    }
+
+    @Override
+    protected void onPostExecute(MedicoBE result) {
+        super.onPostExecute(result);
+
+        mProgress.dismiss();
+
+        try {
+            mContext.autenticarOnComplete(result);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
