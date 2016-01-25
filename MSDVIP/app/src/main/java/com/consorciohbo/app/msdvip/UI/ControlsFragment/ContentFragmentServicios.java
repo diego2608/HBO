@@ -19,11 +19,14 @@ import com.consorciohbo.app.msdvip.R;
 import com.consorciohbo.app.msdvip.UI.ControlsViews.MainActivity;
 import com.consorciohbo.app.msdvip.UI.ControlsViews.MensajeriaContactosActivity;
 import com.consorciohbo.app.msdvip.UI.RecycleViewControllers.TravelListAdapter;
+import com.consorciohbo.app.msdvip.UI.RecycleViewControllers.TravelListAdapterServicios;
 
-
-public class ContentFragment extends Fragment {
+/**
+ * Created by Diego on 25/01/16.
+ */
+public class ContentFragmentServicios extends Fragment{
     private RecyclerView mRecyclerView;
-    private TravelListAdapter mAdapter;
+    private TravelListAdapterServicios mAdapter;
 
     private StaggeredGridLayoutManager mStaggeredLayoutManager;
 
@@ -32,12 +35,12 @@ public class ContentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View viewFragment = inflater.inflate(R.layout.fragment_content_comunicacion,container,false);
+        View viewFragment = inflater.inflate(R.layout.fragment_content_servicios,container,false);
 
-        mRecyclerView = (RecyclerView) viewFragment.findViewById(R.id.listComunicacion);
+        mRecyclerView = (RecyclerView) viewFragment.findViewById(R.id.listServicios);
         mStaggeredLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(mStaggeredLayoutManager);
-        mAdapter = new TravelListAdapter(getActivity());
+        mAdapter = new TravelListAdapterServicios(getActivity());
         mRecyclerView.setAdapter(mAdapter);
 
         return viewFragment;
@@ -52,6 +55,4 @@ public class ContentFragment extends Fragment {
         });*/
 
     }
-
-
 }

@@ -13,11 +13,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.consorciohbo.app.msdvip.BL.BE.MedicoBE;
 import com.consorciohbo.app.msdvip.R;
 import com.consorciohbo.app.msdvip.UI.ControlsFragment.ContentFragment;
+import com.consorciohbo.app.msdvip.UI.ControlsFragment.ContentFragmentAfiliacion;
+import com.consorciohbo.app.msdvip.UI.ControlsFragment.ContentFragmentPerfil;
+import com.consorciohbo.app.msdvip.UI.ControlsFragment.ContentFragmentServicios;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -81,12 +85,22 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.servicios:
                         Toast.makeText(getApplicationContext(), "Servicios", Toast.LENGTH_SHORT).show();
                         getSupportActionBar().setTitle("Servicios");
-                        //      fm.beginTransaction().replace(R.id.frame, new fragment_content_servicios(), "TAG_Servicios").addToBackStack("Login").commit();
+
+                        ContentFragmentServicios fragmentServicios = new ContentFragmentServicios();
+                        android.support.v4.app.FragmentTransaction fragmentTransactionService = getSupportFragmentManager().beginTransaction();
+                        fragmentTransactionService.replace(R.id.frame, fragmentServicios);
+                        fragmentTransactionService.commit();
+
                         return true;
 
                     case R.id.NuevaAfiliacion:
                         Toast.makeText(getApplicationContext(), "Nueva Afiliación", Toast.LENGTH_SHORT).show();
                         getSupportActionBar().setTitle("Nueva Afiliación");
+
+                        ContentFragmentAfiliacion fragmentAfiliacion = new ContentFragmentAfiliacion();
+                        android.support.v4.app.FragmentTransaction fragmentTransactionAfiliacion = getSupportFragmentManager().beginTransaction();
+                        fragmentTransactionAfiliacion.replace(R.id.frame, fragmentAfiliacion);
+                        fragmentTransactionAfiliacion.commit();
                         //  fm.beginTransaction().replace(R.id.frame, new LogInFragment(), "TAG_Afiliacion").addToBackStack("Login").commit()
                         return true;
 
@@ -95,6 +109,10 @@ public class MainActivity extends AppCompatActivity {
                         //  fm.beginTransaction().replace(R.id.frame, new LogInFragment(), "TAG_Perfil").addToBackStack("Login").commit()
                         getSupportActionBar().setTitle("Perfil");
 
+                        ContentFragmentPerfil fragmentPerfil = new ContentFragmentPerfil();
+                        android.support.v4.app.FragmentTransaction fragmentTransactionPerfil = getSupportFragmentManager().beginTransaction();
+                        fragmentTransactionPerfil.replace(R.id.frame, fragmentPerfil);
+                        fragmentTransactionPerfil.commit();
 
                         return true;
 
@@ -137,6 +155,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Comunicacion");
 
         fragmentTransaction.commit();
+
+
 
     }
     //---------------

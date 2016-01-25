@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Created by Diego on 11/12/15.
  */
 public class ServiciosData {
-    public static String[] serviciosNameArray = {" Información Científica", "Sitios web", "Aplicaciones de salud", "Materiales Médicos","Nuestros Eventos"};
+    public static String[] serviciosNameArray = {" Informacion Cientifica", "Sitios web", "Aplicaciones de salud", "Materiales Medicos","Nuestros Eventos"};
 
     public static ArrayList<CardBE> placeList() {
         ArrayList<CardBE> list = new ArrayList<>();

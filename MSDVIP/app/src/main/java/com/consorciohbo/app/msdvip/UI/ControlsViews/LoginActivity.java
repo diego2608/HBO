@@ -35,20 +35,13 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         btnLogin = (Button)findViewById(R.id.btnIniciarSecionLogin);
         btnLogin.setOnClickListener(this);
 
-        /*
+
         //-------------------------------------------------------------------------------------------
         //Defino mi boton Ingresar
-        Button btnLogin = (Button) findViewById(R.id.btnIniciarSecionLogin);
+       // Button btnLogin = (Button) findViewById(R.id.btnIniciarSecionLogin);
 
         //Asigno el evenyo onclick al botn
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Intent vistaLogin = new Intent(LoginActivity.this,MainActivity.class);
-                startActivity(vistaLogin);
-            }
-        });*/
 
     }
 
@@ -100,6 +93,8 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
 
             try {
                 login(v);
+
+
             } catch (InterruptedException e) {
                 Toast.makeText(this, "Ha ocurrido un error. Por favor vuelva a intentar.", Toast.LENGTH_SHORT).show();
             } catch (ExecutionException e) {
@@ -108,9 +103,15 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
                 Toast.makeText(this, "Ha ocurrido un error. Por favor vuelva a intentar.", Toast.LENGTH_SHORT).show();
             }
 
+            Intent vistaLogin = new Intent(LoginActivity.this,MainActivity.class);
+            startActivity(vistaLogin);
+            
         } else {
             Toast.makeText(this, "Ingrese un número CMP", Toast.LENGTH_SHORT).show();
         }
+
+
+
 
     }
 

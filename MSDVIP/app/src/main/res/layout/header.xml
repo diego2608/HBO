@@ -23,7 +23,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Akash Bangad"
+        android:text="Dr. Jorge Luis "
         android:textSize="14sp"
         android:textColor="#080000"
         android:textStyle="bold"
@@ -38,7 +38,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Akash.bangad93@gmail.com"
+        android:text="Jorge.luis@gmail.com"
         android:id="@+id/email_user_menu"
         android:gravity="left"
         android:textStyle="bold"

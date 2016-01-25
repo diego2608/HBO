@@ -46,8 +46,8 @@ public class MedicoObtenerWS extends AsyncTask<String, Integer, MedicoBE> {
         try {
             JSONObject data = new JSONObject();
 
-            data.put("CMP", params[0]);
             data.put("ProgramaID", objUtility.CodAplicacion);
+            data.put("CMP", params[0]);
 
             //StringEntity entity = new StringEntity(data.toString());
             HttpEntity entity = new StringEntity(data.toString());
@@ -64,7 +64,7 @@ public class MedicoObtenerWS extends AsyncTask<String, Integer, MedicoBE> {
                 medico.setTelefono(jsonReponse.getString("Telefono"));
                 medico.setEmail(jsonReponse.getString("Email"));
                 medico.setCMP(jsonReponse.getString("CMP"));
-                medico.setEspecialidad(jsonReponse.getString("Especialidad"));
+               // medico.setEspecialidad(jsonReponse.getString("Especialidad"));
                 medico.setPassword(jsonReponse.getString("Password"));
                 medico = objUtility.DivCompleteName(medico);
             }

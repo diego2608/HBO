@@ -33,8 +33,9 @@ public class MedicoAutenticarWS extends AsyncTask<MedicoBE, Integer, MedicoBE> {
     protected MedicoBE doInBackground(MedicoBE... params) {
         MedicoBE medico = new MedicoBE();
         HttpClient client = new DefaultHttpClient();
+        objUtility = new Utility();
 
-        HttpPost request = new HttpPost("https://mobile.consorciohbo.com.pe/HBOMembership.WebService.Test/MedicoWS.svc/MedicoAutenticar");
+        HttpPost request = new HttpPost("https://mobile.consorciohbo.com.pe/HBOMembership.WebService/MedicoWS.svc/MedicoAutenticar");
         request.setHeader("content-type", "application/json");
 
         try {
@@ -61,7 +62,7 @@ public class MedicoAutenticarWS extends AsyncTask<MedicoBE, Integer, MedicoBE> {
                 medico.setEmail(jsonReponse.getString("Email"));
                 medico.setCMP(jsonReponse.getString("CMP"));
                 medico.setPassword(jsonReponse.getString("Password"));
-                medico.setEstadoActivacion(jsonReponse.getString("EstadoActivacion"));
+              //  medico.setEstadoActivacion(jsonReponse.getString("EstadoActivacion"));
 
                 return medico;
             } catch (Exception ex) {
