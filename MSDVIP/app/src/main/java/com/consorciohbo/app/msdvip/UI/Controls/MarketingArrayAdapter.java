@@ -28,7 +28,7 @@ public class MarketingArrayAdapter extends ArrayAdapter<AreasMarketingBE> {
         super(contextMarketing, R.layout.list_single_marketing);
         this.contextMarketing = contextMarketing;
         this.lstareasBEs = lstareasBEs;
-
+        this.inflaterMarketing = inflaterMarketing;
     }
 
     @Override

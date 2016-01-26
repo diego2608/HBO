@@ -27,6 +27,8 @@ public class MaterialesNoDescargadosArrayAdapter extends ArrayAdapter<Materiales
         super(contextMaterialDescargado, R.layout.list_single_material_nodescargado);
         this.contextMaterialDescargado = contextMaterialDescargado;
         this.lstMaterialesNoDescargadosBE = lstMaterialesNoDescargadosBE;
+        this.inflaterMaterialNoDescargado = inflaterMaterialNoDescargado;
+
     }
 
     @Override

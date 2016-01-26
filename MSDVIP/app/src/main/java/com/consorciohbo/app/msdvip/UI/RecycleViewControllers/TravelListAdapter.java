@@ -1,7 +1,9 @@
 package com.consorciohbo.app.msdvip.UI.RecycleViewControllers;
 
 import android.content.Context;
+import android.nfc.Tag;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,7 @@ import com.squareup.picasso.Picasso;
 /**
  * Created by Diego on 25/11/15.
  */
+//este es el adapter del RecyclerView
 public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.ViewHolder> {
 
     Context mContext;
@@ -26,7 +29,7 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.Vi
     }
 
     // 3
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         public LinearLayout placeHolder;
         public LinearLayout placeNameHolder;
         public TextView placeName;
@@ -39,7 +42,15 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.Vi
             placeNameHolder = (LinearLayout) itemView.findViewById(R.id.placeNameHolder);
             placeImage = (ImageView) itemView.findViewById(R.id.placeImage);
         }
+
+        @Override //nada
+        public void onClick(View v) {
+            Log.d("ONCLICK", String.valueOf(getPosition()));
+        }
+
+        //no imprime la posicion
     }
+
 
     @Override
     public int getItemCount() {
@@ -52,13 +63,17 @@ public class TravelListAdapter extends RecyclerView.Adapter<TravelListAdapter.Vi
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_list_cards, parent, false);
         return new ViewHolder(view);
     }
-
+//toda esa calse es aparte no? no se
     // 3
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
+        //creo la lista y les asigno sus valores
         final CardBE cardBE = new ComunicacionData().placeList().get(position);
         holder.placeName.setText(cardBE.name);
         Picasso.with(mContext).load(cardBE.getImageResourceId(mContext)).into(holder.placeImage);
+
+
     }
+
 
 }

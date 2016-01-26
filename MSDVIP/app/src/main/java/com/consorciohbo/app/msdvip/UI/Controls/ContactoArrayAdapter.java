@@ -29,6 +29,7 @@ public class ContactoArrayAdapter extends ArrayAdapter<ContactosBE>{
         super(context, R.layout.list_single_contacto);
         this.context = context;
         this.lstcontactosBEs = lstcontactosBEs;
+        this.inflater = inflater;
     }
 
     @Override

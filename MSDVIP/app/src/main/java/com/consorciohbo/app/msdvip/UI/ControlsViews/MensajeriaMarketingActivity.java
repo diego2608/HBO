@@ -17,7 +17,19 @@ public class MensajeriaMarketingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mensajeria_marketing);
 
-        ArrayList<AreasMarketingBE> lstAreasBE = null;
+        ArrayList<AreasMarketingBE> lstAreasBE = new ArrayList<AreasMarketingBE>();
+
+
+        AreasMarketingBE objAreas = null;
+        for (int i = 0; i < 3; i++){
+            objAreas = new AreasMarketingBE();
+
+            objAreas.setCorreoArea("correo"+i+"@das.com");
+            objAreas.setId("sfasf23f13w3" + i);
+            objAreas.setNombreArea("AreaMarketingPrueba" + i);
+
+            lstAreasBE.add(objAreas);
+        }
         //inicializa la lista de contactos
         ListView lstView = (ListView) findViewById(R.id.lstvCorreoAreaMarketing);
 

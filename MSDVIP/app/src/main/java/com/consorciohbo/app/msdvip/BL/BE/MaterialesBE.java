@@ -7,17 +7,17 @@ import android.support.annotation.VisibleForTesting;
  */
 public class MaterialesBE {
 
-    public int id;
+    public String id;
     public String nombreMaterial;
     public String descripcion;
-    public boolean estado;
+    public String estado;
     public String urlDescargar;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -37,11 +37,11 @@ public class MaterialesBE {
         this.descripcion = descripcion;
     }
 
-    public boolean isEstado() {
+    public String isEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 

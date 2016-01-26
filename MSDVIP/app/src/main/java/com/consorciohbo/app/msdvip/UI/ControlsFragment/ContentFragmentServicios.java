@@ -16,8 +16,12 @@ import android.widget.Toast;
 
 import com.consorciohbo.app.msdvip.BL.BE.CardBE;
 import com.consorciohbo.app.msdvip.R;
+import com.consorciohbo.app.msdvip.UI.Controls.RecyclerItemClickListener;
 import com.consorciohbo.app.msdvip.UI.ControlsViews.MainActivity;
+import com.consorciohbo.app.msdvip.UI.ControlsViews.MaterialesMedicosActivity;
 import com.consorciohbo.app.msdvip.UI.ControlsViews.MensajeriaContactosActivity;
+import com.consorciohbo.app.msdvip.UI.ControlsViews.MensajeriaMarketingActivity;
+import com.consorciohbo.app.msdvip.UI.ControlsViews.SitiosWebActivity;
 import com.consorciohbo.app.msdvip.UI.RecycleViewControllers.TravelListAdapter;
 import com.consorciohbo.app.msdvip.UI.RecycleViewControllers.TravelListAdapterServicios;
 
@@ -43,16 +47,33 @@ public class ContentFragmentServicios extends Fragment{
         mAdapter = new TravelListAdapterServicios(getActivity());
         mRecyclerView.setAdapter(mAdapter);
 
+        mRecyclerView.addOnItemTouchListener(
+                new RecyclerItemClickListener(getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        switch (position) {
+                            case 0:
+
+                                break;
+                            case 1:
+                                Intent sitiosWebView = new Intent(getActivity(), SitiosWebActivity.class);
+                                startActivity(sitiosWebView);
+                                break;
+                            case 2:
+                                break;
+                            case 3:
+                                Intent materialesView = new Intent(getActivity(), MaterialesMedicosActivity.class);
+                                startActivity(materialesView);
+                                break;
+                            case 4:
+                                break;
+                        }
+                    }
+                })
+        );
         return viewFragment;
 
 
-      /*  mRecyclerView.setOnClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent vistaLogin = new Intent(ContentFragment.this,MensajeriaContactosActivity.class);
-                startActivity(vistaLogin);
-            }
-        });*/
 
     }
 }

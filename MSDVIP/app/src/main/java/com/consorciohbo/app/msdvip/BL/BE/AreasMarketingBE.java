@@ -5,15 +5,15 @@ package com.consorciohbo.app.msdvip.BL.BE;
  */
 public class AreasMarketingBE {
 
-    public int id;
+    public String id;
     public String nombreArea;
     public String correoArea;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

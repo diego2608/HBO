@@ -17,8 +17,17 @@ public class SitiosWebActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sitios_web);
 
-        ArrayList<WebsitesBE> lstWebsitesBE = null;
+        ArrayList<WebsitesBE> lstWebsitesBE = new ArrayList<WebsitesBE>();
+        WebsitesBE objWebsite = null;
 
+        for (int i = 0; i < 3; i++){
+            objWebsite = new WebsitesBE();
+
+            objWebsite.setUrlWebsite("www.google.com/" + i );
+            objWebsite.setId("sfasf23f13w3");
+
+            lstWebsitesBE.add(objWebsite);
+        }
         ListView lstView = (ListView) findViewById(R.id.lstvWebsites);
 
         WebsitesArrayAdapter websitesArrayAdapter = new WebsitesArrayAdapter(this,getLayoutInflater(),lstWebsitesBE);

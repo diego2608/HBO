@@ -4,16 +4,16 @@ package com.consorciohbo.app.msdvip.BL.BE;
  * Created by Diego on 26/11/15.
  */
 public class ContactosBE {
-    public int id;
+    public String id;
     public String nombre;
     public String imgName;
     public String correo;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

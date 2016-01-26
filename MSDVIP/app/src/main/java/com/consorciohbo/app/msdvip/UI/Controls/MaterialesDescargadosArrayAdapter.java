@@ -28,7 +28,7 @@ public class MaterialesDescargadosArrayAdapter extends ArrayAdapter<MaterialesBE
 
         this.contextMaterialesDescargados = contextMaterialesDescargados;
         this.lstMaterialesDescargadosBE = lstMaterialesDescargadosBE;
-
+        this.inflaterMaterialesDescargados = inflaterMaterialesDescargados;
     }
 
     @Override

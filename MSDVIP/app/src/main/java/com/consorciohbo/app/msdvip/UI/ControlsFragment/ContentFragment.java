@@ -12,15 +12,19 @@ import android.view.ViewGroup;
 import android.support.v4.app.Fragment;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.consorciohbo.app.msdvip.BL.BE.CardBE;
 import com.consorciohbo.app.msdvip.R;
+import com.consorciohbo.app.msdvip.UI.Controls.RecyclerItemClickListener;
 import com.consorciohbo.app.msdvip.UI.ControlsViews.MainActivity;
 import com.consorciohbo.app.msdvip.UI.ControlsViews.MensajeriaContactosActivity;
+import com.consorciohbo.app.msdvip.UI.ControlsViews.MensajeriaMarketingActivity;
 import com.consorciohbo.app.msdvip.UI.RecycleViewControllers.TravelListAdapter;
 
-
+//este es el manejador del fragment
 public class ContentFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private TravelListAdapter mAdapter;
@@ -40,18 +44,38 @@ public class ContentFragment extends Fragment {
         mAdapter = new TravelListAdapter(getActivity());
         mRecyclerView.setAdapter(mAdapter);
 
+
+
+
+        mRecyclerView.addOnItemTouchListener(
+                new RecyclerItemClickListener(getActivity(),new RecyclerItemClickListener.OnItemClickListener(){
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        switch (position){
+                            case 0:
+
+                                Intent contactosView = new Intent(getActivity(),MensajeriaContactosActivity.class);
+                                startActivity(contactosView);
+                                break;
+                            case 1:
+                                Intent marketingView = new Intent(getActivity(), MensajeriaMarketingActivity.class);
+                                startActivity(marketingView);
+                                break;
+                            case 2:
+                                break;
+                            case 3:
+                                break;
+                        }
+                    }
+                })
+        );
+
         return viewFragment;
-
-
-      /*  mRecyclerView.setOnClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent vistaLogin = new Intent(ContentFragment.this,MensajeriaContactosActivity.class);
-                startActivity(vistaLogin);
-            }
-        });*/
-
+        //pendejo.... :'v
+        //oe para llamar a un acvity des aca
+        // usas get Activity y le mandas el Intent , has usado inetnt no?si
     }
+
 
 
 }

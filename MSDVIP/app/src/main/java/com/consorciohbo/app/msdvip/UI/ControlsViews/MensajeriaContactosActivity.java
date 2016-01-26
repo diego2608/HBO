@@ -19,7 +19,17 @@ public class MensajeriaContactosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contactos_mensajeria);
 
-        ArrayList<ContactosBE> contactosBEs = null;
+        ArrayList<ContactosBE> contactosBEs = new ArrayList<ContactosBE>();
+        ContactosBE objContacto = null;
+        for (int i = 0; i < 3; i++){
+            objContacto = new ContactosBE();
+
+            objContacto.setCorreo("correo"+i+"@das.com");
+            objContacto.setId("sfasf23f13w3");
+            objContacto.setNombre("ContactoPrueba" + i);
+
+            contactosBEs.add(objContacto);
+        }
         //inicializa la lista de contactos
 
         ListView listView = (ListView) findViewById(R.id.listContactos);

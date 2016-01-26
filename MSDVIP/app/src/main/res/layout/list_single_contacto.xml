@@ -22,7 +22,9 @@
             android:text="hola"
             android:textSize="12sp"
             android:paddingTop="10dp"
-            android:foregroundGravity="center|center_vertical|center_horizontal" />
+            android:foregroundGravity="center|center_vertical|center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
 
         <ImageButton
             android:layout_width="wrap_content"

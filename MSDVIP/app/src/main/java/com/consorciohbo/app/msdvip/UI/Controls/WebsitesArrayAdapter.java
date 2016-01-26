@@ -25,6 +25,8 @@ public class WebsitesArrayAdapter extends ArrayAdapter<WebsitesBE> {
         super(contextWebsite, R.layout.list_single_website);
         this.contextWebsite = contextWebsite;
         this.lstWebsitesBEs = lstWebsitesBEs;
+        this.inflaterWebsite = inflaterWebsite;
+
     }
 
     @Override

@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.consorciohbo.app.msdvip.BL.BE.CardBE;
 import com.consorciohbo.app.msdvip.R;
 import com.squareup.picasso.Picasso;
@@ -16,6 +15,7 @@ import com.squareup.picasso.Picasso;
 /**
  * Created by Diego on 25/01/16.
  */
+
 public class TravelListAdapterServicios extends RecyclerView.Adapter<TravelListAdapterServicios.ViewHolder> {
     Context mContext;
 
